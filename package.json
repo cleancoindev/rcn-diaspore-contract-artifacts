@@ -1,0 +1,45 @@
+{
+  "name": "@jpgonzalezra/diaspore-contract-artifacts",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=6.12"
+  },
+  "description": "Diaspore smart contract compilation artifacts",
+  "main": "lib/src/index.js",
+  "license": "Apache-2.0",
+  "files": [
+    "lib/**/*",
+    "artifacts/*"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "shx rm -rf lib",
+    "build": "yarn clean && yarn tsc -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ripio/rcn-diaspore-contract-artifacts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ripio/rcn-diaspore-contract-artifacts/issues"
+  },
+  "homepage": "https://github.com/ripio/rcn-diaspore-contract-artifacts/blob/master/README.md",
+  "keywords": [
+    "rcn",
+    "diaspore",
+    "artifacts",
+    "json",
+    "abi",
+    "javascript",
+    "typescript"
+  ],
+  "devDependencies": {
+    "shx": "^0.2.2",
+    "typescript": "3.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

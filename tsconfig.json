@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es2017", "dom"],
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "lib",
+    "rootDir": ".",
+    "resolveJsonModule": true
+  },
+  "include": ["./src/**/*"],
+  "files": [
+    "./artifacts/Cosigner.json",
+    "./artifacts/DebtEngine.json",
+    "./artifacts/ERC165.json",
+    "./artifacts/ERC721Base.json",
+    "./artifacts/IERC20.json",
+    "./artifacts/IERC165.json",
+    "./artifacts/IERC173.json",
+    "./artifacts/InstallmentsModel.json",
+    "./artifacts/LoanApprover.json",
+    "./artifacts/LoanManager.json",
+    "./artifacts/Model.json",
+    "./artifacts/ModelDescriptor.json",
+    "./artifacts/NanoLoanModel.json",
+    "./artifacts/Oracle.json",
+    "./artifacts/OracleAdapter.json",
+    "./artifacts/Ownable.json",
+    "./artifacts/RateOracle.json",
+    "./artifacts/SimpleDelegable.json",
+    "./artifacts/URIProvider.json"
+  ]
+}
