@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# to run: sh artifacts.sh dev-1.0.0 v1.0.0-beta "Auto release 1.0.0 true
+# to run: sh artifacts.sh master v1.0.1-beta "Auto release 1.0.1"
 
 # define absolute path to rcn-diaspore-core and rcn-diaspore-contract-artifacts projects
-PATH_CORE="/Users/jpgonzalezra/Documents/Code/rcn-network"
+PATH_CORE="/Users/jpgonzalezra/Documents/Code/ripio/rcn-network"
 PATH_CONTRACT_ARTIFACTS="/Users/jpgonzalezra/Documents/Code/rcn-diaspore-contract-artifacts"
 
 # define absolute path to rcn-diaspore-abi-wrappers if you want automate the json to ts transformation
-PATH_ABI_WRAPPERS="/Users/jpgonzalezra/Documents/Code/rcn-diaspore-contract-abi-wrapper"
+PATH_ABI_WRAPPERS="/Users/jpgonzalezra/Documents/Code/rcn-diaspore-abi-wrappers"
 # define absolute path to rcn-diaspore-contract-wrappers if you want update rcn packages
 PATH_CONTRACT_WRAPPERS="/Users/jpgonzalezra/Documents/Code/rcn-diaspore-contract-wrapper"
 
@@ -39,7 +39,7 @@ done
 
 # build the new json abi files, push it and tag it to a new version
 cd $PATH_CONTRACT_ARTIFACTS
-yarn clean && yarn build:ci
+yarn clean && yarn build
 git add --all && git commit -m "$3" && git push origin master && git tag -a $2 -m "$3" && git push origin $2
 
 echo "\nArtifacts successfully updated..."
