@@ -10,10 +10,7 @@ LoanApprover.json
 LoanManager.json
 Model.json
 ModelDescriptor.json
-NanoLoanModel.json
 Oracle.json
 OracleAdapter.json
 Ownable.json
 RateOracle.json
-SimpleDelegable.json
-URIProvider.json
