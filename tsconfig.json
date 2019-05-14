@@ -30,12 +30,9 @@
     "./artifacts/LoanManager.json",
     "./artifacts/Model.json",
     "./artifacts/ModelDescriptor.json",
-    "./artifacts/NanoLoanModel.json",
     "./artifacts/Oracle.json",
     "./artifacts/OracleAdapter.json",
     "./artifacts/Ownable.json",
-    "./artifacts/RateOracle.json",
-    "./artifacts/SimpleDelegable.json",
-    "./artifacts/URIProvider.json"
+    "./artifacts/RateOracle.json"
   ]
 }

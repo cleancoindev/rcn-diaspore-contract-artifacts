@@ -10,13 +10,10 @@ import * as LoanApprover from '../artifacts/LoanApprover.json';
 import * as LoanManager from '../artifacts/LoanManager.json';
 import * as Model from '../artifacts/Model.json';
 import * as ModelDescriptor from '../artifacts/ModelDescriptor.json';
-import * as NanoLoanModel from '../artifacts/NanoLoanModel.json';
 import * as Oracle from '../artifacts/Oracle.json';
 import * as OracleAdapter from '../artifacts/OracleAdapter.json';
 import * as Ownable from '../artifacts/Ownable.json';
 import * as RateOracle from '../artifacts/RateOracle.json';
-import * as SimpleDelegable from '../artifacts/SimpleDelegable.json';
-import * as URIProvider from '../artifacts/URIProvider.json';
 
 export {
   Cosigner,
@@ -31,11 +28,8 @@ export {
   LoanManager,
   Model,
   ModelDescriptor,
-  NanoLoanModel,
   Oracle,
   OracleAdapter,
   Ownable,
-  RateOracle,
-  SimpleDelegable,
-  URIProvider
+  RateOracle
 };
