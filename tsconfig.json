@@ -33,6 +33,7 @@
     "./artifacts/Oracle.json",
     "./artifacts/OracleAdapter.json",
     "./artifacts/Ownable.json",
-    "./artifacts/RateOracle.json"
+    "./artifacts/RateOracle.json",
+    "./artifacts/Registry.json"
   ]
 }
