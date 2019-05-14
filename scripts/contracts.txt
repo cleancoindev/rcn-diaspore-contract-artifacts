@@ -14,3 +14,4 @@ Oracle.json
 OracleAdapter.json
 Ownable.json
 RateOracle.json
+Registry.json

@@ -11,6 +11,7 @@ import * as LoanManager from '../artifacts/LoanManager.json';
 import * as Model from '../artifacts/Model.json';
 import * as ModelDescriptor from '../artifacts/ModelDescriptor.json';
 import * as Oracle from '../artifacts/Oracle.json';
+import * as Registry from '../artifacts/Registry.json';
 import * as OracleAdapter from '../artifacts/OracleAdapter.json';
 import * as Ownable from '../artifacts/Ownable.json';
 import * as RateOracle from '../artifacts/RateOracle.json';
@@ -31,5 +32,6 @@ export {
   Oracle,
   OracleAdapter,
   Ownable,
+  Registry,
   RateOracle
 };
