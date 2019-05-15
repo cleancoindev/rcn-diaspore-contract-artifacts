@@ -86,7 +86,7 @@
         "id": 1000,
         "nodeType": "ImportDirective",
         "scope": 1069,
-        "sourceUnit": 12507,
+        "sourceUnit": 12570,
         "src": "25:35:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -100,10 +100,10 @@
               "id": 1001,
               "name": "IERC173",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 12506,
+              "referencedDeclaration": 12569,
               "src": "83:7:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IERC173_$12506",
+                "typeIdentifier": "t_contract$_IERC173_$12569",
                 "typeString": "contract IERC173"
               }
             },
@@ -113,7 +113,7 @@
           }
         ],
         "contractDependencies": [
-          12506
+          12569
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -121,7 +121,7 @@
         "id": 1068,
         "linearizedBaseContracts": [
           1068,
-          12506
+          12569
         ],
         "name": "Ownable",
         "nodeType": "ContractDefinition",
@@ -182,7 +182,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 15613,
+                            "referencedDeclaration": 15676,
                             "src": "166:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -258,10 +258,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        15616,
-                        15617
+                        15679,
+                        15680
                       ],
-                      "referencedDeclaration": 15617,
+                      "referencedDeclaration": 15680,
                       "src": "158:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -343,7 +343,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 15613,
+                        "referencedDeclaration": 15676,
                         "src": "285:3:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -442,7 +442,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 15613,
+                          "referencedDeclaration": 15676,
                           "src": "345:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -479,7 +479,7 @@
                       "name": "OwnershipTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 12500,
+                      "referencedDeclaration": 12563,
                       "src": "310:20:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
@@ -743,10 +743,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        15616,
-                        15617
+                        15679,
+                        15680
                       ],
-                      "referencedDeclaration": 15617,
+                      "referencedDeclaration": 15680,
                       "src": "649:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -817,7 +817,7 @@
                       "name": "OwnershipTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 12500,
+                      "referencedDeclaration": 12563,
                       "src": "724:20:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
@@ -960,7 +960,7 @@
             "scope": 1068,
             "src": "574:224:2",
             "stateMutability": "nonpayable",
-            "superFunction": 12505,
+            "superFunction": 12568,
             "visibility": "external"
           }
         ],
@@ -997,7 +997,7 @@
         "id": 1000,
         "nodeType": "ImportDirective",
         "scope": 1069,
-        "sourceUnit": 12507,
+        "sourceUnit": 12570,
         "src": "25:35:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1011,10 +1011,10 @@
               "id": 1001,
               "name": "IERC173",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 12506,
+              "referencedDeclaration": 12569,
               "src": "83:7:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IERC173_$12506",
+                "typeIdentifier": "t_contract$_IERC173_$12569",
                 "typeString": "contract IERC173"
               }
             },
@@ -1024,7 +1024,7 @@
           }
         ],
         "contractDependencies": [
-          12506
+          12569
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1032,7 +1032,7 @@
         "id": 1068,
         "linearizedBaseContracts": [
           1068,
-          12506
+          12569
         ],
         "name": "Ownable",
         "nodeType": "ContractDefinition",
@@ -1093,7 +1093,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 15613,
+                            "referencedDeclaration": 15676,
                             "src": "166:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1169,10 +1169,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        15616,
-                        15617
+                        15679,
+                        15680
                       ],
-                      "referencedDeclaration": 15617,
+                      "referencedDeclaration": 15680,
                       "src": "158:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1254,7 +1254,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 15613,
+                        "referencedDeclaration": 15676,
                         "src": "285:3:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1353,7 +1353,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 15613,
+                          "referencedDeclaration": 15676,
                           "src": "345:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1390,7 +1390,7 @@
                       "name": "OwnershipTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 12500,
+                      "referencedDeclaration": 12563,
                       "src": "310:20:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
@@ -1654,10 +1654,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        15616,
-                        15617
+                        15679,
+                        15680
                       ],
-                      "referencedDeclaration": 15617,
+                      "referencedDeclaration": 15680,
                       "src": "649:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1728,7 +1728,7 @@
                       "name": "OwnershipTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 12500,
+                      "referencedDeclaration": 12563,
                       "src": "724:20:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
@@ -1871,7 +1871,7 @@
             "scope": 1068,
             "src": "574:224:2",
             "stateMutability": "nonpayable",
-            "superFunction": 12505,
+            "superFunction": 12568,
             "visibility": "external"
           }
         ],
@@ -1887,7 +1887,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-05-15T18:47:52.170Z",
+  "updatedAt": "2019-05-15T18:54:11.012Z",
   "devdoc": {
     "methods": {
       "transferOwnership(address)": {

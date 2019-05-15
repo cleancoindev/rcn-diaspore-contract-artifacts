@@ -5,7 +5,7 @@ ERC721Base.json
 IERC20.json
 IERC165.json
 IERC173.json
-InstallmentModel.json
+InstallmentsModel.json
 LoanApprover.json
 LoanManager.json
 Model.json

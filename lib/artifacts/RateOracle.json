@@ -1,0 +1,1579 @@
+{
+    "contractName": "RateOracle",
+    "abi": [
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "interfaceID",
+                    "type": "bytes4"
+                }
+            ],
+            "name": "supportsInterface",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "VERSION",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "symbol",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "name",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "decimals",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "token",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "currency",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "maintainer",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "url",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "readSample",
+            "outputs": [
+                {
+                    "name": "_tokens",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_equivalent",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "bytecode": "0x",
+    "deployedBytecode": "0x",
+    "sourceMap": "",
+    "deployedSourceMap": "",
+    "source": "pragma solidity ^0.5.7;\n\nimport \"../../../interfaces/IERC165.sol\";\n\n\n/**\n    @dev Defines the interface of a standard Diaspore RCN Oracle,\n\n    The contract should also implement it's ERC165 interface: 0xa265d8e0\n\n    @notice Each oracle can only support one currency\n\n    @author Agustin Aguilar\n*/\ncontract RateOracle is IERC165 {\n    uint256 public constant VERSION = 5;\n    bytes4 internal constant RATE_ORACLE_INTERFACE = 0xa265d8e0;\n\n    constructor() internal {}\n\n    /**\n        3 or 4 letters symbol of the currency, Ej: ETH\n    */\n    function symbol() external view returns (string memory);\n\n    /**\n        Descriptive name of the currency, Ej: Ethereum\n    */\n    function name() external view returns (string memory);\n\n    /**\n        The number of decimals of the currency represented by this Oracle,\n            it should be the most common number of decimal places\n    */\n    function decimals() external view returns (uint256);\n\n    /**\n        The base token on which the sample is returned\n            should be the RCN Token address.\n    */\n    function token() external view returns (address);\n\n    /**\n        The currency symbol encoded on a UTF-8 Hex\n    */\n    function currency() external view returns (bytes32);\n\n    /**\n        The name of the Individual or Company in charge of this Oracle\n    */\n    function maintainer() external view returns (string memory);\n\n    /**\n        Returns the url where the oracle exposes a valid \"oracleData\" if needed\n    */\n    function url() external view returns (string memory);\n\n    /**\n        Returns a sample on how many token() are equals to how many currency()\n    */\n    function readSample(bytes calldata _data) external returns (uint256 _tokens, uint256 _equivalent);\n}\n",
+    "sourcePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/RateOracle.sol",
+    "ast": {
+        "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/RateOracle.sol",
+        "exportedSymbols": {
+            "RateOracle": [
+                9222
+            ]
+        },
+        "id": 9223,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 9164,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.5",
+                    ".7"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:18"
+            },
+            {
+                "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/IERC165.sol",
+                "file": "../../../interfaces/IERC165.sol",
+                "id": 9165,
+                "nodeType": "ImportDirective",
+                "scope": 9223,
+                "sourceUnit": 12556,
+                "src": "25:41:18",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "baseContracts": [
+                    {
+                        "arguments": null,
+                        "baseName": {
+                            "contractScope": null,
+                            "id": 9166,
+                            "name": "IERC165",
+                            "nodeType": "UserDefinedTypeName",
+                            "referencedDeclaration": 12555,
+                            "src": "323:7:18",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IERC165_$12555",
+                                "typeString": "contract IERC165"
+                            }
+                        },
+                        "id": 9167,
+                        "nodeType": "InheritanceSpecifier",
+                        "src": "323:7:18"
+                    }
+                ],
+                "contractDependencies": [
+                    12555
+                ],
+                "contractKind": "contract",
+                "documentation": "@dev Defines the interface of a standard Diaspore RCN Oracle,\nThe contract should also implement it's ERC165 interface: 0xa265d8e0\n@notice Each oracle can only support one currency\n@author Agustin Aguilar",
+                "fullyImplemented": false,
+                "id": 9222,
+                "linearizedBaseContracts": [
+                    9222,
+                    12555
+                ],
+                "name": "RateOracle",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": true,
+                        "id": 9170,
+                        "name": "VERSION",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 9222,
+                        "src": "337:35:18",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 9168,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "337:7:18",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "argumentTypes": null,
+                            "hexValue": "35",
+                            "id": 9169,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "371:1:18",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_5_by_1",
+                                "typeString": "int_const 5"
+                            },
+                            "value": "5"
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": true,
+                        "id": 9173,
+                        "name": "RATE_ORACLE_INTERFACE",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 9222,
+                        "src": "378:59:18",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                        },
+                        "typeName": {
+                            "id": 9171,
+                            "name": "bytes4",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "378:6:18",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_bytes4",
+                                "typeString": "bytes4"
+                            }
+                        },
+                        "value": {
+                            "argumentTypes": null,
+                            "hexValue": "30786132363564386530",
+                            "id": 9172,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "427:10:18",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2724583648_by_1",
+                                "typeString": "int_const 2724583648"
+                            },
+                            "value": "0xa265d8e0"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 9176,
+                            "nodeType": "Block",
+                            "src": "467:2:18",
+                            "statements": []
+                        },
+                        "documentation": null,
+                        "id": 9177,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [],
+                        "name": "",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9174,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "455:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9175,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "467:0:18"
+                        },
+                        "scope": 9222,
+                        "src": "444:25:18",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "3 or 4 letters symbol of the currency, Ej: ETH",
+                        "id": 9182,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "symbol",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9178,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "560:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9181,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9180,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9182,
+                                    "src": "586:13:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 9179,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "586:6:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "585:15:18"
+                        },
+                        "scope": 9222,
+                        "src": "545:56:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "Descriptive name of the currency, Ej: Ethereum",
+                        "id": 9187,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "name",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9183,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "690:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9186,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9185,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9187,
+                                    "src": "716:13:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 9184,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "716:6:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "715:15:18"
+                        },
+                        "scope": 9222,
+                        "src": "677:54:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "The number of decimals of the currency represented by this Oracle,\nit should be the most common number of decimal places",
+                        "id": 9192,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "decimals",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9188,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "910:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9191,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9190,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9192,
+                                    "src": "936:7:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9189,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "936:7:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "935:9:18"
+                        },
+                        "scope": 9222,
+                        "src": "893:52:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "The base token on which the sample is returned\nshould be the RCN Token address.",
+                        "id": 9197,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "token",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9193,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1080:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9196,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9195,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9197,
+                                    "src": "1106:7:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 9194,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1106:7:18",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1105:9:18"
+                        },
+                        "scope": 9222,
+                        "src": "1066:49:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "The currency symbol encoded on a UTF-8 Hex",
+                        "id": 9202,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "currency",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9198,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1204:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9201,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9200,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9202,
+                                    "src": "1230:7:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 9199,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1230:7:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1229:9:18"
+                        },
+                        "scope": 9222,
+                        "src": "1187:52:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "The name of the Individual or Company in charge of this Oracle",
+                        "id": 9207,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "maintainer",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9203,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1350:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9206,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9205,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9207,
+                                    "src": "1376:13:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 9204,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1376:6:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1375:15:18"
+                        },
+                        "scope": 9222,
+                        "src": "1331:60:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "Returns the url where the oracle exposes a valid \"oracleData\" if needed",
+                        "id": 9212,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "url",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9208,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1504:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9211,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9210,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9212,
+                                    "src": "1530:13:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 9209,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1530:6:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1529:15:18"
+                        },
+                        "scope": 9222,
+                        "src": "1492:53:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "Returns a sample on how many token() are equals to how many currency()",
+                        "id": 9221,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "readSample",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9215,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9214,
+                                    "name": "_data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9221,
+                                    "src": "1665:20:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9213,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1665:5:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1664:22:18"
+                        },
+                        "returnParameters": {
+                            "id": 9220,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9217,
+                                    "name": "_tokens",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9221,
+                                    "src": "1705:15:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9216,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1705:7:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 9219,
+                                    "name": "_equivalent",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9221,
+                                    "src": "1722:19:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9218,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1722:7:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1704:38:18"
+                        },
+                        "scope": 9222,
+                        "src": "1645:98:18",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "external"
+                    }
+                ],
+                "scope": 9223,
+                "src": "300:1445:18"
+            }
+        ],
+        "src": "0:1746:18"
+    },
+    "legacyAST": {
+        "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/RateOracle.sol",
+        "exportedSymbols": {
+            "RateOracle": [
+                9222
+            ]
+        },
+        "id": 9223,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 9164,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.5",
+                    ".7"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:18"
+            },
+            {
+                "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/IERC165.sol",
+                "file": "../../../interfaces/IERC165.sol",
+                "id": 9165,
+                "nodeType": "ImportDirective",
+                "scope": 9223,
+                "sourceUnit": 12556,
+                "src": "25:41:18",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "baseContracts": [
+                    {
+                        "arguments": null,
+                        "baseName": {
+                            "contractScope": null,
+                            "id": 9166,
+                            "name": "IERC165",
+                            "nodeType": "UserDefinedTypeName",
+                            "referencedDeclaration": 12555,
+                            "src": "323:7:18",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IERC165_$12555",
+                                "typeString": "contract IERC165"
+                            }
+                        },
+                        "id": 9167,
+                        "nodeType": "InheritanceSpecifier",
+                        "src": "323:7:18"
+                    }
+                ],
+                "contractDependencies": [
+                    12555
+                ],
+                "contractKind": "contract",
+                "documentation": "@dev Defines the interface of a standard Diaspore RCN Oracle,\nThe contract should also implement it's ERC165 interface: 0xa265d8e0\n@notice Each oracle can only support one currency\n@author Agustin Aguilar",
+                "fullyImplemented": false,
+                "id": 9222,
+                "linearizedBaseContracts": [
+                    9222,
+                    12555
+                ],
+                "name": "RateOracle",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": true,
+                        "id": 9170,
+                        "name": "VERSION",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 9222,
+                        "src": "337:35:18",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 9168,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "337:7:18",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "argumentTypes": null,
+                            "hexValue": "35",
+                            "id": 9169,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "371:1:18",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_5_by_1",
+                                "typeString": "int_const 5"
+                            },
+                            "value": "5"
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": true,
+                        "id": 9173,
+                        "name": "RATE_ORACLE_INTERFACE",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 9222,
+                        "src": "378:59:18",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                        },
+                        "typeName": {
+                            "id": 9171,
+                            "name": "bytes4",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "378:6:18",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_bytes4",
+                                "typeString": "bytes4"
+                            }
+                        },
+                        "value": {
+                            "argumentTypes": null,
+                            "hexValue": "30786132363564386530",
+                            "id": 9172,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "427:10:18",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2724583648_by_1",
+                                "typeString": "int_const 2724583648"
+                            },
+                            "value": "0xa265d8e0"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 9176,
+                            "nodeType": "Block",
+                            "src": "467:2:18",
+                            "statements": []
+                        },
+                        "documentation": null,
+                        "id": 9177,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [],
+                        "name": "",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9174,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "455:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9175,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "467:0:18"
+                        },
+                        "scope": 9222,
+                        "src": "444:25:18",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "3 or 4 letters symbol of the currency, Ej: ETH",
+                        "id": 9182,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "symbol",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9178,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "560:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9181,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9180,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9182,
+                                    "src": "586:13:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 9179,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "586:6:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "585:15:18"
+                        },
+                        "scope": 9222,
+                        "src": "545:56:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "Descriptive name of the currency, Ej: Ethereum",
+                        "id": 9187,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "name",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9183,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "690:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9186,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9185,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9187,
+                                    "src": "716:13:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 9184,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "716:6:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "715:15:18"
+                        },
+                        "scope": 9222,
+                        "src": "677:54:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "The number of decimals of the currency represented by this Oracle,\nit should be the most common number of decimal places",
+                        "id": 9192,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "decimals",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9188,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "910:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9191,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9190,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9192,
+                                    "src": "936:7:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9189,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "936:7:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "935:9:18"
+                        },
+                        "scope": 9222,
+                        "src": "893:52:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "The base token on which the sample is returned\nshould be the RCN Token address.",
+                        "id": 9197,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "token",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9193,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1080:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9196,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9195,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9197,
+                                    "src": "1106:7:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 9194,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1106:7:18",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1105:9:18"
+                        },
+                        "scope": 9222,
+                        "src": "1066:49:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "The currency symbol encoded on a UTF-8 Hex",
+                        "id": 9202,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "currency",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9198,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1204:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9201,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9200,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9202,
+                                    "src": "1230:7:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 9199,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1230:7:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1229:9:18"
+                        },
+                        "scope": 9222,
+                        "src": "1187:52:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "The name of the Individual or Company in charge of this Oracle",
+                        "id": 9207,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "maintainer",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9203,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1350:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9206,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9205,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9207,
+                                    "src": "1376:13:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 9204,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1376:6:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1375:15:18"
+                        },
+                        "scope": 9222,
+                        "src": "1331:60:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "Returns the url where the oracle exposes a valid \"oracleData\" if needed",
+                        "id": 9212,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "url",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9208,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1504:2:18"
+                        },
+                        "returnParameters": {
+                            "id": 9211,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9210,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9212,
+                                    "src": "1530:13:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 9209,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1530:6:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1529:15:18"
+                        },
+                        "scope": 9222,
+                        "src": "1492:53:18",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "Returns a sample on how many token() are equals to how many currency()",
+                        "id": 9221,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "readSample",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9215,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9214,
+                                    "name": "_data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9221,
+                                    "src": "1665:20:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9213,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1665:5:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1664:22:18"
+                        },
+                        "returnParameters": {
+                            "id": 9220,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9217,
+                                    "name": "_tokens",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9221,
+                                    "src": "1705:15:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9216,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1705:7:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 9219,
+                                    "name": "_equivalent",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9221,
+                                    "src": "1722:19:18",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9218,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1722:7:18",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1704:38:18"
+                        },
+                        "scope": 9222,
+                        "src": "1645:98:18",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "external"
+                    }
+                ],
+                "scope": 9223,
+                "src": "300:1445:18"
+            }
+        ],
+        "src": "0:1746:18"
+    },
+    "compiler": {
+        "name": "solc",
+        "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+    },
+    "networks": {},
+    "schemaVersion": "3.0.1",
+    "updatedAt": "2019-05-15T18:54:11.066Z",
+    "devdoc": {
+        "author": "Agustin Aguilar",
+        "details": "Defines the interface of a standard Diaspore RCN Oracle, The contract should also implement it's ERC165 interface: 0xa265d8e0",
+        "methods": {
+            "supportsInterface(bytes4)": {
+                "details": "Interface identification is specified in ERC-165. This function  uses less than 30,000 gas.",
+                "params": {
+                    "interfaceID": "The interface identifier, as specified in ERC-165"
+                },
+                "return": "`true` if the contract implements `interfaceID` and  `interfaceID` is not 0xffffffff, `false` otherwise"
+            }
+        }
+    },
+    "userdoc": {
+        "methods": {
+            "currency()": {
+                "notice": "The currency symbol encoded on a UTF-8 Hex"
+            },
+            "decimals()": {
+                "notice": "The number of decimals of the currency represented by this Oracle, it should be the most common number of decimal places"
+            },
+            "maintainer()": {
+                "notice": "The name of the Individual or Company in charge of this Oracle"
+            },
+            "name()": {
+                "notice": "Descriptive name of the currency, Ej: Ethereum"
+            },
+            "readSample(bytes)": {
+                "notice": "Returns a sample on how many token() are equals to how many currency()"
+            },
+            "supportsInterface(bytes4)": {
+                "notice": "Query if a contract implements an interface"
+            },
+            "symbol()": {
+                "notice": "3 or 4 letters symbol of the currency, Ej: ETH"
+            },
+            "token()": {
+                "notice": "The base token on which the sample is returned should be the RCN Token address."
+            },
+            "url()": {
+                "notice": "Returns the url where the oracle exposes a valid \"oracleData\" if needed"
+            }
+        },
+        "notice": "Each oracle can only support one currency"
+    }
+}

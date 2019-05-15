@@ -31,14 +31,14 @@
     "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/IERC165.sol",
     "exportedSymbols": {
       "IERC165": [
-        12492
+        12555
       ]
     },
-    "id": 12493,
+    "id": 12556,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 12484,
+        "id": 12547,
         "literals": [
           "solidity",
           "^",
@@ -54,9 +54,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 12492,
+        "id": 12555,
         "linearizedBaseContracts": [
-          12492
+          12555
         ],
         "name": "IERC165",
         "nodeType": "ContractDefinition",
@@ -64,22 +64,22 @@
           {
             "body": null,
             "documentation": "@notice Query if a contract implements an interface\n @param interfaceID The interface identifier, as specified in ERC-165\n @dev Interface identification is specified in ERC-165. This function\n  uses less than 30,000 gas.\n @return `true` if the contract implements `interfaceID` and\n  `interfaceID` is not 0xffffffff, `false` otherwise",
-            "id": 12491,
+            "id": 12554,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "supportsInterface",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12487,
+              "id": 12550,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12486,
+                  "id": 12549,
                   "name": "interfaceID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12491,
+                  "scope": 12554,
                   "src": "455:18:23",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -88,7 +88,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 12485,
+                    "id": 12548,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "455:6:23",
@@ -104,15 +104,15 @@
               "src": "454:20:23"
             },
             "returnParameters": {
-              "id": 12490,
+              "id": 12553,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12489,
+                  "id": 12552,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12491,
+                  "scope": 12554,
                   "src": "498:4:23",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -121,7 +121,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 12488,
+                    "id": 12551,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "498:4:23",
@@ -136,14 +136,14 @@
               ],
               "src": "497:6:23"
             },
-            "scope": 12492,
+            "scope": 12555,
             "src": "428:76:23",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 12493,
+        "scope": 12556,
         "src": "26:480:23"
       }
     ],
@@ -153,14 +153,14 @@
     "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/IERC165.sol",
     "exportedSymbols": {
       "IERC165": [
-        12492
+        12555
       ]
     },
-    "id": 12493,
+    "id": 12556,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 12484,
+        "id": 12547,
         "literals": [
           "solidity",
           "^",
@@ -176,9 +176,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 12492,
+        "id": 12555,
         "linearizedBaseContracts": [
-          12492
+          12555
         ],
         "name": "IERC165",
         "nodeType": "ContractDefinition",
@@ -186,22 +186,22 @@
           {
             "body": null,
             "documentation": "@notice Query if a contract implements an interface\n @param interfaceID The interface identifier, as specified in ERC-165\n @dev Interface identification is specified in ERC-165. This function\n  uses less than 30,000 gas.\n @return `true` if the contract implements `interfaceID` and\n  `interfaceID` is not 0xffffffff, `false` otherwise",
-            "id": 12491,
+            "id": 12554,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "supportsInterface",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12487,
+              "id": 12550,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12486,
+                  "id": 12549,
                   "name": "interfaceID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12491,
+                  "scope": 12554,
                   "src": "455:18:23",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -210,7 +210,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 12485,
+                    "id": 12548,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "455:6:23",
@@ -226,15 +226,15 @@
               "src": "454:20:23"
             },
             "returnParameters": {
-              "id": 12490,
+              "id": 12553,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12489,
+                  "id": 12552,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12491,
+                  "scope": 12554,
                   "src": "498:4:23",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -243,7 +243,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 12488,
+                    "id": 12551,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "498:4:23",
@@ -258,14 +258,14 @@
               ],
               "src": "497:6:23"
             },
-            "scope": 12492,
+            "scope": 12555,
             "src": "428:76:23",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 12493,
+        "scope": 12556,
         "src": "26:480:23"
       }
     ],
@@ -277,7 +277,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-05-15T18:47:52.255Z",
+  "updatedAt": "2019-05-15T18:54:11.102Z",
   "devdoc": {
     "methods": {
       "supportsInterface(bytes4)": {

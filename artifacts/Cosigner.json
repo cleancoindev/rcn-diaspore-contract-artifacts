@@ -129,14 +129,14 @@
     "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/Cosigner.sol",
     "exportedSymbols": {
       "Cosigner": [
-        12482
+        12545
       ]
     },
-    "id": 12483,
+    "id": 12546,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 12436,
+        "id": 12499,
         "literals": [
           "solidity",
           "^",
@@ -152,19 +152,19 @@
         "contractKind": "contract",
         "documentation": "@dev Defines the interface of a standard RCN cosigner.\nThe cosigner is an agent that gives an insurance to the lender in the event of a defaulted loan, the confitions\nof the insurance and the cost of the given are defined by the cosigner.\nThe lender will decide what cosigner to use, if any; the address of the cosigner and the valid data provided by the\nagent should be passed as params when the lender calls the \"lend\" method on the engine.\nWhen the default conditions defined by the cosigner aligns with the status of the loan, the lender of the engine\nshould be able to call the \"claim\" method to receive the benefit; the cosigner can define aditional requirements to\ncall this method, like the transfer of the ownership of the loan.",
         "fullyImplemented": false,
-        "id": 12482,
+        "id": 12545,
         "linearizedBaseContracts": [
-          12482
+          12545
         ],
         "name": "Cosigner",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 12439,
+            "id": 12502,
             "name": "VERSION",
             "nodeType": "VariableDeclaration",
-            "scope": 12482,
+            "scope": 12545,
             "src": "830:35:22",
             "stateVariable": true,
             "storageLocation": "default",
@@ -173,7 +173,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 12437,
+              "id": 12500,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "830:7:22",
@@ -185,7 +185,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "32",
-              "id": 12438,
+              "id": 12501,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -205,28 +205,28 @@
           {
             "body": null,
             "documentation": "@return the url of the endpoint that exposes the insurance offers.",
-            "id": 12444,
+            "id": 12507,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "url",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12440,
+              "id": 12503,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "974:2:22"
             },
             "returnParameters": {
-              "id": 12443,
+              "id": 12506,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12442,
+                  "id": 12505,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12444,
+                  "scope": 12507,
                   "src": "998:13:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -235,7 +235,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 12441,
+                    "id": 12504,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "998:6:22",
@@ -250,7 +250,7 @@
               ],
               "src": "997:15:22"
             },
-            "scope": 12482,
+            "scope": 12545,
             "src": "962:51:22",
             "stateMutability": "view",
             "superFunction": null,
@@ -259,22 +259,22 @@
           {
             "body": null,
             "documentation": "@dev Retrieves the cost of a given insurance, this amount should be exact.\n@return the cost of the cosign, in RCN wei",
-            "id": 12457,
+            "id": 12520,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cost",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12453,
+              "id": 12516,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12446,
+                  "id": 12509,
                   "name": "engine",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1192:14:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -283,7 +283,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12445,
+                    "id": 12508,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1192:7:22",
@@ -298,10 +298,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12448,
+                  "id": 12511,
                   "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1216:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -310,7 +310,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12447,
+                    "id": 12510,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1216:7:22",
@@ -324,10 +324,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12450,
+                  "id": 12513,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1239:17:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -336,7 +336,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12449,
+                    "id": 12512,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1239:5:22",
@@ -350,10 +350,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12452,
+                  "id": 12515,
                   "name": "oracleData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1266:23:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -362,7 +362,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12451,
+                    "id": 12514,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1266:5:22",
@@ -378,15 +378,15 @@
               "src": "1182:113:22"
             },
             "returnParameters": {
-              "id": 12456,
+              "id": 12519,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12455,
+                  "id": 12518,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1325:7:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -395,7 +395,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12454,
+                    "id": 12517,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1325:7:22",
@@ -410,7 +410,7 @@
               ],
               "src": "1324:9:22"
             },
-            "scope": 12482,
+            "scope": 12545,
             "src": "1169:165:22",
             "stateMutability": "view",
             "superFunction": null,
@@ -419,22 +419,22 @@
           {
             "body": null,
             "documentation": "@dev The engine calls this method for confirmation of the conditions, if the cosigner accepts the liability of\nthe insurance it must call the method \"cosign\" of the engine. If the cosigner does not call that method, or\ndoes not return true to this method, the operation fails.\n@return true if the cosigner accepts the liability",
-            "id": 12470,
+            "id": 12533,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "requestCosign",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12466,
+              "id": 12529,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12459,
+                  "id": 12522,
                   "name": "engine",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1748:14:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -443,7 +443,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12458,
+                    "id": 12521,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1748:7:22",
@@ -458,10 +458,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12461,
+                  "id": 12524,
                   "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1772:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -470,7 +470,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12460,
+                    "id": 12523,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1772:7:22",
@@ -484,10 +484,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12463,
+                  "id": 12526,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1795:17:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -496,7 +496,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12462,
+                    "id": 12525,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1795:5:22",
@@ -510,10 +510,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12465,
+                  "id": 12528,
                   "name": "oracleData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1822:23:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -522,7 +522,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12464,
+                    "id": 12527,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1822:5:22",
@@ -538,15 +538,15 @@
               "src": "1738:113:22"
             },
             "returnParameters": {
-              "id": 12469,
+              "id": 12532,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12468,
+                  "id": 12531,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1876:4:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -555,7 +555,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 12467,
+                    "id": 12530,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1876:4:22",
@@ -570,7 +570,7 @@
               ],
               "src": "1875:6:22"
             },
-            "scope": 12482,
+            "scope": 12545,
             "src": "1716:166:22",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -579,22 +579,22 @@
           {
             "body": null,
             "documentation": "@dev Claims the benefit of the insurance if the loan is defaulted, this method should be only calleable by the\ncurrent lender of the loan.\n@return true if the claim was done correctly.",
-            "id": 12481,
+            "id": 12544,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "claim",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12477,
+              "id": 12540,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12472,
+                  "id": 12535,
                   "name": "engine",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12481,
+                  "scope": 12544,
                   "src": "2128:14:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -603,7 +603,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12471,
+                    "id": 12534,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2128:7:22",
@@ -618,10 +618,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12474,
+                  "id": 12537,
                   "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12481,
+                  "scope": 12544,
                   "src": "2144:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -630,7 +630,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12473,
+                    "id": 12536,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2144:7:22",
@@ -644,10 +644,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12476,
+                  "id": 12539,
                   "name": "oracleData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12481,
+                  "scope": 12544,
                   "src": "2159:23:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -656,7 +656,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12475,
+                    "id": 12538,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2159:5:22",
@@ -672,15 +672,15 @@
               "src": "2127:56:22"
             },
             "returnParameters": {
-              "id": 12480,
+              "id": 12543,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12479,
+                  "id": 12542,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12481,
+                  "scope": 12544,
                   "src": "2200:4:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -689,7 +689,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 12478,
+                    "id": 12541,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2200:4:22",
@@ -704,14 +704,14 @@
               ],
               "src": "2199:6:22"
             },
-            "scope": 12482,
+            "scope": 12545,
             "src": "2113:93:22",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 12483,
+        "scope": 12546,
         "src": "806:1402:22"
       }
     ],
@@ -721,14 +721,14 @@
     "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/Cosigner.sol",
     "exportedSymbols": {
       "Cosigner": [
-        12482
+        12545
       ]
     },
-    "id": 12483,
+    "id": 12546,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 12436,
+        "id": 12499,
         "literals": [
           "solidity",
           "^",
@@ -744,19 +744,19 @@
         "contractKind": "contract",
         "documentation": "@dev Defines the interface of a standard RCN cosigner.\nThe cosigner is an agent that gives an insurance to the lender in the event of a defaulted loan, the confitions\nof the insurance and the cost of the given are defined by the cosigner.\nThe lender will decide what cosigner to use, if any; the address of the cosigner and the valid data provided by the\nagent should be passed as params when the lender calls the \"lend\" method on the engine.\nWhen the default conditions defined by the cosigner aligns with the status of the loan, the lender of the engine\nshould be able to call the \"claim\" method to receive the benefit; the cosigner can define aditional requirements to\ncall this method, like the transfer of the ownership of the loan.",
         "fullyImplemented": false,
-        "id": 12482,
+        "id": 12545,
         "linearizedBaseContracts": [
-          12482
+          12545
         ],
         "name": "Cosigner",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 12439,
+            "id": 12502,
             "name": "VERSION",
             "nodeType": "VariableDeclaration",
-            "scope": 12482,
+            "scope": 12545,
             "src": "830:35:22",
             "stateVariable": true,
             "storageLocation": "default",
@@ -765,7 +765,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 12437,
+              "id": 12500,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "830:7:22",
@@ -777,7 +777,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "32",
-              "id": 12438,
+              "id": 12501,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -797,28 +797,28 @@
           {
             "body": null,
             "documentation": "@return the url of the endpoint that exposes the insurance offers.",
-            "id": 12444,
+            "id": 12507,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "url",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12440,
+              "id": 12503,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "974:2:22"
             },
             "returnParameters": {
-              "id": 12443,
+              "id": 12506,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12442,
+                  "id": 12505,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12444,
+                  "scope": 12507,
                   "src": "998:13:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -827,7 +827,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 12441,
+                    "id": 12504,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "998:6:22",
@@ -842,7 +842,7 @@
               ],
               "src": "997:15:22"
             },
-            "scope": 12482,
+            "scope": 12545,
             "src": "962:51:22",
             "stateMutability": "view",
             "superFunction": null,
@@ -851,22 +851,22 @@
           {
             "body": null,
             "documentation": "@dev Retrieves the cost of a given insurance, this amount should be exact.\n@return the cost of the cosign, in RCN wei",
-            "id": 12457,
+            "id": 12520,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cost",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12453,
+              "id": 12516,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12446,
+                  "id": 12509,
                   "name": "engine",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1192:14:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -875,7 +875,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12445,
+                    "id": 12508,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1192:7:22",
@@ -890,10 +890,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12448,
+                  "id": 12511,
                   "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1216:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -902,7 +902,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12447,
+                    "id": 12510,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1216:7:22",
@@ -916,10 +916,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12450,
+                  "id": 12513,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1239:17:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -928,7 +928,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12449,
+                    "id": 12512,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1239:5:22",
@@ -942,10 +942,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12452,
+                  "id": 12515,
                   "name": "oracleData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1266:23:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -954,7 +954,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12451,
+                    "id": 12514,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1266:5:22",
@@ -970,15 +970,15 @@
               "src": "1182:113:22"
             },
             "returnParameters": {
-              "id": 12456,
+              "id": 12519,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12455,
+                  "id": 12518,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12457,
+                  "scope": 12520,
                   "src": "1325:7:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -987,7 +987,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12454,
+                    "id": 12517,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1325:7:22",
@@ -1002,7 +1002,7 @@
               ],
               "src": "1324:9:22"
             },
-            "scope": 12482,
+            "scope": 12545,
             "src": "1169:165:22",
             "stateMutability": "view",
             "superFunction": null,
@@ -1011,22 +1011,22 @@
           {
             "body": null,
             "documentation": "@dev The engine calls this method for confirmation of the conditions, if the cosigner accepts the liability of\nthe insurance it must call the method \"cosign\" of the engine. If the cosigner does not call that method, or\ndoes not return true to this method, the operation fails.\n@return true if the cosigner accepts the liability",
-            "id": 12470,
+            "id": 12533,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "requestCosign",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12466,
+              "id": 12529,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12459,
+                  "id": 12522,
                   "name": "engine",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1748:14:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1035,7 +1035,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12458,
+                    "id": 12521,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1748:7:22",
@@ -1050,10 +1050,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12461,
+                  "id": 12524,
                   "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1772:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1062,7 +1062,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12460,
+                    "id": 12523,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1772:7:22",
@@ -1076,10 +1076,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12463,
+                  "id": 12526,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1795:17:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1088,7 +1088,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12462,
+                    "id": 12525,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1795:5:22",
@@ -1102,10 +1102,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12465,
+                  "id": 12528,
                   "name": "oracleData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1822:23:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1114,7 +1114,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12464,
+                    "id": 12527,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1822:5:22",
@@ -1130,15 +1130,15 @@
               "src": "1738:113:22"
             },
             "returnParameters": {
-              "id": 12469,
+              "id": 12532,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12468,
+                  "id": 12531,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12470,
+                  "scope": 12533,
                   "src": "1876:4:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1147,7 +1147,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 12467,
+                    "id": 12530,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1876:4:22",
@@ -1162,7 +1162,7 @@
               ],
               "src": "1875:6:22"
             },
-            "scope": 12482,
+            "scope": 12545,
             "src": "1716:166:22",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1171,22 +1171,22 @@
           {
             "body": null,
             "documentation": "@dev Claims the benefit of the insurance if the loan is defaulted, this method should be only calleable by the\ncurrent lender of the loan.\n@return true if the claim was done correctly.",
-            "id": 12481,
+            "id": 12544,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "claim",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12477,
+              "id": 12540,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12472,
+                  "id": 12535,
                   "name": "engine",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12481,
+                  "scope": 12544,
                   "src": "2128:14:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1195,7 +1195,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 12471,
+                    "id": 12534,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2128:7:22",
@@ -1210,10 +1210,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12474,
+                  "id": 12537,
                   "name": "index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12481,
+                  "scope": 12544,
                   "src": "2144:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1222,7 +1222,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 12473,
+                    "id": 12536,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2144:7:22",
@@ -1236,10 +1236,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 12476,
+                  "id": 12539,
                   "name": "oracleData",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12481,
+                  "scope": 12544,
                   "src": "2159:23:22",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1248,7 +1248,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 12475,
+                    "id": 12538,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2159:5:22",
@@ -1264,15 +1264,15 @@
               "src": "2127:56:22"
             },
             "returnParameters": {
-              "id": 12480,
+              "id": 12543,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 12479,
+                  "id": 12542,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12481,
+                  "scope": 12544,
                   "src": "2200:4:22",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1281,7 +1281,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 12478,
+                    "id": 12541,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2200:4:22",
@@ -1296,14 +1296,14 @@
               ],
               "src": "2199:6:22"
             },
-            "scope": 12482,
+            "scope": 12545,
             "src": "2113:93:22",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 12483,
+        "scope": 12546,
         "src": "806:1402:22"
       }
     ],
@@ -1315,7 +1315,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-05-15T18:47:52.255Z",
+  "updatedAt": "2019-05-15T18:54:11.102Z",
   "devdoc": {
     "details": "Defines the interface of a standard RCN cosigner. The cosigner is an agent that gives an insurance to the lender in the event of a defaulted loan, the confitions of the insurance and the cost of the given are defined by the cosigner. The lender will decide what cosigner to use, if any; the address of the cosigner and the valid data provided by the agent should be passed as params when the lender calls the \"lend\" method on the engine. When the default conditions defined by the cosigner aligns with the status of the loan, the lender of the engine should be able to call the \"claim\" method to receive the benefit; the cosigner can define aditional requirements to call this method, like the transfer of the ownership of the loan.",
     "methods": {

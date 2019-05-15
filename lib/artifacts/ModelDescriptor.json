@@ -1,0 +1,1334 @@
+{
+    "contractName": "ModelDescriptor",
+    "abi": [
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "simFirstObligation",
+            "outputs": [
+                {
+                    "name": "amount",
+                    "type": "uint256"
+                },
+                {
+                    "name": "time",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "simTotalObligation",
+            "outputs": [
+                {
+                    "name": "amount",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "simDuration",
+            "outputs": [
+                {
+                    "name": "duration",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "simPunitiveInterestRate",
+            "outputs": [
+                {
+                    "name": "punitiveInterestRate",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "simFrequency",
+            "outputs": [
+                {
+                    "name": "frequency",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ],
+            "name": "simInstallments",
+            "outputs": [
+                {
+                    "name": "installments",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "bytecode": "0x",
+    "deployedBytecode": "0x",
+    "sourceMap": "",
+    "deployedSourceMap": "",
+    "source": "pragma solidity ^0.5.7;\n\n\ncontract ModelDescriptor {\n    bytes4 internal constant MODEL_DESCRIPTOR_INTERFACE = 0x02735375;\n\n    function simFirstObligation(bytes calldata data) external view returns (uint256 amount, uint256 time);\n    function simTotalObligation(bytes calldata data) external view returns (uint256 amount);\n    function simDuration(bytes calldata data) external view returns (uint256 duration);\n    function simPunitiveInterestRate(bytes calldata data) external view returns (uint256 punitiveInterestRate);\n    function simFrequency(bytes calldata data) external view returns (uint256 frequency);\n    function simInstallments(bytes calldata data) external view returns (uint256 installments);\n}\n",
+    "sourcePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/ModelDescriptor.sol",
+    "ast": {
+        "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/ModelDescriptor.sol",
+        "exportedSymbols": {
+            "ModelDescriptor": [
+                9162
+            ]
+        },
+        "id": 9163,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 9114,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.5",
+                    ".7"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:17"
+            },
+            {
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "documentation": null,
+                "fullyImplemented": false,
+                "id": 9162,
+                "linearizedBaseContracts": [
+                    9162
+                ],
+                "name": "ModelDescriptor",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": true,
+                        "id": 9117,
+                        "name": "MODEL_DESCRIPTOR_INTERFACE",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 9162,
+                        "src": "57:64:17",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                        },
+                        "typeName": {
+                            "id": 9115,
+                            "name": "bytes4",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "57:6:17",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_bytes4",
+                                "typeString": "bytes4"
+                            }
+                        },
+                        "value": {
+                            "argumentTypes": null,
+                            "hexValue": "30783032373335333735",
+                            "id": 9116,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "111:10:17",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_41112437_by_1",
+                                "typeString": "int_const 41112437"
+                            },
+                            "value": "0x02735375"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9126,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simFirstObligation",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9120,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9119,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9126,
+                                    "src": "156:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9118,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "156:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "155:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9125,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9122,
+                                    "name": "amount",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9126,
+                                    "src": "200:14:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9121,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "200:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 9124,
+                                    "name": "time",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9126,
+                                    "src": "216:12:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9123,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "216:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "199:30:17"
+                        },
+                        "scope": 9162,
+                        "src": "128:102:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9133,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simTotalObligation",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9129,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9128,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9133,
+                                    "src": "263:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9127,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "263:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "262:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9132,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9131,
+                                    "name": "amount",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9133,
+                                    "src": "307:14:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9130,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "307:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "306:16:17"
+                        },
+                        "scope": 9162,
+                        "src": "235:88:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9140,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simDuration",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9136,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9135,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9140,
+                                    "src": "349:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9134,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "349:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "348:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9139,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9138,
+                                    "name": "duration",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9140,
+                                    "src": "393:16:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9137,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "393:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "392:18:17"
+                        },
+                        "scope": 9162,
+                        "src": "328:83:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9147,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simPunitiveInterestRate",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9143,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9142,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9147,
+                                    "src": "449:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9141,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "449:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "448:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9146,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9145,
+                                    "name": "punitiveInterestRate",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9147,
+                                    "src": "493:28:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9144,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "493:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "492:30:17"
+                        },
+                        "scope": 9162,
+                        "src": "416:107:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9154,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simFrequency",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9150,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9149,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9154,
+                                    "src": "550:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9148,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "550:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "549:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9153,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9152,
+                                    "name": "frequency",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9154,
+                                    "src": "594:17:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9151,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "594:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "593:19:17"
+                        },
+                        "scope": 9162,
+                        "src": "528:85:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9161,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simInstallments",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9157,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9156,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9161,
+                                    "src": "643:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9155,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "643:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "642:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9160,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9159,
+                                    "name": "installments",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9161,
+                                    "src": "687:20:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9158,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "687:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "686:22:17"
+                        },
+                        "scope": 9162,
+                        "src": "618:91:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    }
+                ],
+                "scope": 9163,
+                "src": "26:685:17"
+            }
+        ],
+        "src": "0:712:17"
+    },
+    "legacyAST": {
+        "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/ModelDescriptor.sol",
+        "exportedSymbols": {
+            "ModelDescriptor": [
+                9162
+            ]
+        },
+        "id": 9163,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 9114,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.5",
+                    ".7"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:17"
+            },
+            {
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "documentation": null,
+                "fullyImplemented": false,
+                "id": 9162,
+                "linearizedBaseContracts": [
+                    9162
+                ],
+                "name": "ModelDescriptor",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": true,
+                        "id": 9117,
+                        "name": "MODEL_DESCRIPTOR_INTERFACE",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 9162,
+                        "src": "57:64:17",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                        },
+                        "typeName": {
+                            "id": 9115,
+                            "name": "bytes4",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "57:6:17",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_bytes4",
+                                "typeString": "bytes4"
+                            }
+                        },
+                        "value": {
+                            "argumentTypes": null,
+                            "hexValue": "30783032373335333735",
+                            "id": 9116,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "111:10:17",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_41112437_by_1",
+                                "typeString": "int_const 41112437"
+                            },
+                            "value": "0x02735375"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9126,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simFirstObligation",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9120,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9119,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9126,
+                                    "src": "156:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9118,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "156:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "155:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9125,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9122,
+                                    "name": "amount",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9126,
+                                    "src": "200:14:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9121,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "200:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 9124,
+                                    "name": "time",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9126,
+                                    "src": "216:12:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9123,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "216:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "199:30:17"
+                        },
+                        "scope": 9162,
+                        "src": "128:102:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9133,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simTotalObligation",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9129,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9128,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9133,
+                                    "src": "263:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9127,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "263:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "262:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9132,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9131,
+                                    "name": "amount",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9133,
+                                    "src": "307:14:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9130,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "307:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "306:16:17"
+                        },
+                        "scope": 9162,
+                        "src": "235:88:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9140,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simDuration",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9136,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9135,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9140,
+                                    "src": "349:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9134,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "349:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "348:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9139,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9138,
+                                    "name": "duration",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9140,
+                                    "src": "393:16:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9137,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "393:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "392:18:17"
+                        },
+                        "scope": 9162,
+                        "src": "328:83:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9147,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simPunitiveInterestRate",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9143,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9142,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9147,
+                                    "src": "449:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9141,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "449:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "448:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9146,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9145,
+                                    "name": "punitiveInterestRate",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9147,
+                                    "src": "493:28:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9144,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "493:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "492:30:17"
+                        },
+                        "scope": 9162,
+                        "src": "416:107:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9154,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simFrequency",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9150,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9149,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9154,
+                                    "src": "550:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9148,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "550:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "549:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9153,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9152,
+                                    "name": "frequency",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9154,
+                                    "src": "594:17:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9151,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "594:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "593:19:17"
+                        },
+                        "scope": 9162,
+                        "src": "528:85:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 9161,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "simInstallments",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 9157,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9156,
+                                    "name": "data",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9161,
+                                    "src": "643:19:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 9155,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "643:5:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "642:21:17"
+                        },
+                        "returnParameters": {
+                            "id": 9160,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 9159,
+                                    "name": "installments",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 9161,
+                                    "src": "687:20:17",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 9158,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "687:7:17",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "686:22:17"
+                        },
+                        "scope": 9162,
+                        "src": "618:91:17",
+                        "stateMutability": "view",
+                        "superFunction": null,
+                        "visibility": "external"
+                    }
+                ],
+                "scope": 9163,
+                "src": "26:685:17"
+            }
+        ],
+        "src": "0:712:17"
+    },
+    "compiler": {
+        "name": "solc",
+        "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+    },
+    "networks": {},
+    "schemaVersion": "3.0.1",
+    "updatedAt": "2019-05-15T18:54:11.066Z",
+    "devdoc": {
+        "methods": {}
+    },
+    "userdoc": {
+        "methods": {}
+    }
+}

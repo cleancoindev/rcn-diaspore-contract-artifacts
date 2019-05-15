@@ -1,0 +1,755 @@
+{
+    "contractName": "LoanApprover",
+    "abi": [
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "interfaceID",
+                    "type": "bytes4"
+                }
+            ],
+            "name": "supportsInterface",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_futureDebt",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "approveRequest",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_requestData",
+                    "type": "bytes"
+                },
+                {
+                    "name": "_loanData",
+                    "type": "bytes"
+                },
+                {
+                    "name": "_isBorrower",
+                    "type": "bool"
+                },
+                {
+                    "name": "_id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "settleApproveRequest",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "bytecode": "0x",
+    "deployedBytecode": "0x",
+    "sourceMap": "",
+    "deployedSourceMap": "",
+    "source": "pragma solidity ^0.5.7;\n\nimport \"../../../interfaces/IERC165.sol\";\n\n\n/**\n    A contract implementing LoanApprover is able to approve loan requests using callbacks,\n    to approve a loan the contract should respond the callbacks the result of\n    one designated value XOR keccak256(\"approve-loan-request\")\n\n    keccak256(\"approve-loan-request\"): 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\n\n    To receive calls on the callbacks, the contract should also implement the following ERC165 interfaces:\n\n    approveRequest: 0x76ba6009\n    settleApproveRequest: 0xcd40239e\n    LoanApprover: 0xbbfa4397\n*/\ncontract LoanApprover is IERC165 {\n    /**\n        Request the approve of a loan created using requestLoan, if the borrower is this contract,\n        to approve the request the contract should return:\n\n        _futureDebt XOR 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\n\n        @param _futureDebt ID of the loan to approve\n\n        @return _futureDebt XOR keccak256(\"approve-loan-request\"), if the approve is accepted\n    */\n    function approveRequest(bytes32 _futureDebt) external returns (bytes32);\n\n    /**\n        Request the approve of a loan being settled, the contract can be called as borrower or creator.\n        To approve the request the contract should return:\n\n        _id XOR 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\n\n        @param _requestData All the parameters of the loan request\n        @param _loanData Data to feed to the Model\n        @param _isBorrower True if this contract is the borrower, False if the contract is the creator\n        @param _id loanManager.requestSignature(_requestDatam _loanData)\n\n        @return _id XOR keccak256(\"approve-loan-request\"), if the approve is accepted\n    */\n    function settleApproveRequest(\n        bytes calldata _requestData,\n        bytes calldata _loanData,\n        bool _isBorrower,\n        uint256 _id\n    )\n        external returns (bytes32);\n}\n",
+    "sourcePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/LoanApprover.sol",
+    "ast": {
+        "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/LoanApprover.sol",
+        "exportedSymbols": {
+            "LoanApprover": [
+                8913
+            ]
+        },
+        "id": 8914,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 8889,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.5",
+                    ".7"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:15"
+            },
+            {
+                "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/IERC165.sol",
+                "file": "../../../interfaces/IERC165.sol",
+                "id": 8890,
+                "nodeType": "ImportDirective",
+                "scope": 8914,
+                "sourceUnit": 12556,
+                "src": "25:41:15",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "baseContracts": [
+                    {
+                        "arguments": null,
+                        "baseName": {
+                            "contractScope": null,
+                            "id": 8891,
+                            "name": "IERC165",
+                            "nodeType": "UserDefinedTypeName",
+                            "referencedDeclaration": 12555,
+                            "src": "646:7:15",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IERC165_$12555",
+                                "typeString": "contract IERC165"
+                            }
+                        },
+                        "id": 8892,
+                        "nodeType": "InheritanceSpecifier",
+                        "src": "646:7:15"
+                    }
+                ],
+                "contractDependencies": [
+                    12555
+                ],
+                "contractKind": "contract",
+                "documentation": "A contract implementing LoanApprover is able to approve loan requests using callbacks,\nto approve a loan the contract should respond the callbacks the result of\none designated value XOR keccak256(\"approve-loan-request\")\nkeccak256(\"approve-loan-request\"): 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\nTo receive calls on the callbacks, the contract should also implement the following ERC165 interfaces:\napproveRequest: 0x76ba6009\nsettleApproveRequest: 0xcd40239e\nLoanApprover: 0xbbfa4397",
+                "fullyImplemented": false,
+                "id": 8913,
+                "linearizedBaseContracts": [
+                    8913,
+                    12555
+                ],
+                "name": "LoanApprover",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "body": null,
+                        "documentation": "Request the approve of a loan created using requestLoan, if the borrower is this contract,\nto approve the request the contract should return:\n_futureDebt XOR 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\n@param _futureDebt ID of the loan to approve\n@return _futureDebt XOR keccak256(\"approve-loan-request\"), if the approve is accepted",
+                        "id": 8899,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "approveRequest",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 8895,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 8894,
+                                    "name": "_futureDebt",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8899,
+                                    "src": "1098:19:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 8893,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1098:7:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1097:21:15"
+                        },
+                        "returnParameters": {
+                            "id": 8898,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 8897,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8899,
+                                    "src": "1137:7:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 8896,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1137:7:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1136:9:15"
+                        },
+                        "scope": 8913,
+                        "src": "1074:72:15",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "Request the approve of a loan being settled, the contract can be called as borrower or creator.\nTo approve the request the contract should return:\n_id XOR 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\n@param _requestData All the parameters of the loan request\n@param _loanData Data to feed to the Model\n@param _isBorrower True if this contract is the borrower, False if the contract is the creator\n@param _id loanManager.requestSignature(_requestDatam _loanData)\n@return _id XOR keccak256(\"approve-loan-request\"), if the approve is accepted",
+                        "id": 8912,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "settleApproveRequest",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 8908,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 8901,
+                                    "name": "_requestData",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1835:27:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 8900,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1835:5:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 8903,
+                                    "name": "_loanData",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1872:24:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 8902,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1872:5:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 8905,
+                                    "name": "_isBorrower",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1906:16:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    },
+                                    "typeName": {
+                                        "id": 8904,
+                                        "name": "bool",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1906:4:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 8907,
+                                    "name": "_id",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1932:11:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 8906,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1932:7:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1825:124:15"
+                        },
+                        "returnParameters": {
+                            "id": 8911,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 8910,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1976:7:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 8909,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1976:7:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1975:9:15"
+                        },
+                        "scope": 8913,
+                        "src": "1796:189:15",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "external"
+                    }
+                ],
+                "scope": 8914,
+                "src": "621:1366:15"
+            }
+        ],
+        "src": "0:1988:15"
+    },
+    "legacyAST": {
+        "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/LoanApprover.sol",
+        "exportedSymbols": {
+            "LoanApprover": [
+                8913
+            ]
+        },
+        "id": 8914,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 8889,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.5",
+                    ".7"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:15"
+            },
+            {
+                "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/IERC165.sol",
+                "file": "../../../interfaces/IERC165.sol",
+                "id": 8890,
+                "nodeType": "ImportDirective",
+                "scope": 8914,
+                "sourceUnit": 12556,
+                "src": "25:41:15",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "baseContracts": [
+                    {
+                        "arguments": null,
+                        "baseName": {
+                            "contractScope": null,
+                            "id": 8891,
+                            "name": "IERC165",
+                            "nodeType": "UserDefinedTypeName",
+                            "referencedDeclaration": 12555,
+                            "src": "646:7:15",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IERC165_$12555",
+                                "typeString": "contract IERC165"
+                            }
+                        },
+                        "id": 8892,
+                        "nodeType": "InheritanceSpecifier",
+                        "src": "646:7:15"
+                    }
+                ],
+                "contractDependencies": [
+                    12555
+                ],
+                "contractKind": "contract",
+                "documentation": "A contract implementing LoanApprover is able to approve loan requests using callbacks,\nto approve a loan the contract should respond the callbacks the result of\none designated value XOR keccak256(\"approve-loan-request\")\nkeccak256(\"approve-loan-request\"): 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\nTo receive calls on the callbacks, the contract should also implement the following ERC165 interfaces:\napproveRequest: 0x76ba6009\nsettleApproveRequest: 0xcd40239e\nLoanApprover: 0xbbfa4397",
+                "fullyImplemented": false,
+                "id": 8913,
+                "linearizedBaseContracts": [
+                    8913,
+                    12555
+                ],
+                "name": "LoanApprover",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "body": null,
+                        "documentation": "Request the approve of a loan created using requestLoan, if the borrower is this contract,\nto approve the request the contract should return:\n_futureDebt XOR 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\n@param _futureDebt ID of the loan to approve\n@return _futureDebt XOR keccak256(\"approve-loan-request\"), if the approve is accepted",
+                        "id": 8899,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "approveRequest",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 8895,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 8894,
+                                    "name": "_futureDebt",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8899,
+                                    "src": "1098:19:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 8893,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1098:7:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1097:21:15"
+                        },
+                        "returnParameters": {
+                            "id": 8898,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 8897,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8899,
+                                    "src": "1137:7:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 8896,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1137:7:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1136:9:15"
+                        },
+                        "scope": 8913,
+                        "src": "1074:72:15",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": null,
+                        "documentation": "Request the approve of a loan being settled, the contract can be called as borrower or creator.\nTo approve the request the contract should return:\n_id XOR 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a\n@param _requestData All the parameters of the loan request\n@param _loanData Data to feed to the Model\n@param _isBorrower True if this contract is the borrower, False if the contract is the creator\n@param _id loanManager.requestSignature(_requestDatam _loanData)\n@return _id XOR keccak256(\"approve-loan-request\"), if the approve is accepted",
+                        "id": 8912,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "settleApproveRequest",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 8908,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 8901,
+                                    "name": "_requestData",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1835:27:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 8900,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1835:5:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 8903,
+                                    "name": "_loanData",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1872:24:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes_calldata_ptr",
+                                        "typeString": "bytes"
+                                    },
+                                    "typeName": {
+                                        "id": 8902,
+                                        "name": "bytes",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1872:5:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes_storage_ptr",
+                                            "typeString": "bytes"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 8905,
+                                    "name": "_isBorrower",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1906:16:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    },
+                                    "typeName": {
+                                        "id": 8904,
+                                        "name": "bool",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1906:4:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 8907,
+                                    "name": "_id",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1932:11:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 8906,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1932:7:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1825:124:15"
+                        },
+                        "returnParameters": {
+                            "id": 8911,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 8910,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 8912,
+                                    "src": "1976:7:15",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    },
+                                    "typeName": {
+                                        "id": 8909,
+                                        "name": "bytes32",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1976:7:15",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bytes32",
+                                            "typeString": "bytes32"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1975:9:15"
+                        },
+                        "scope": 8913,
+                        "src": "1796:189:15",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "external"
+                    }
+                ],
+                "scope": 8914,
+                "src": "621:1366:15"
+            }
+        ],
+        "src": "0:1988:15"
+    },
+    "compiler": {
+        "name": "solc",
+        "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+    },
+    "networks": {},
+    "schemaVersion": "3.0.1",
+    "updatedAt": "2019-05-15T18:54:11.065Z",
+    "devdoc": {
+        "methods": {
+            "approveRequest(bytes32)": {
+                "params": {
+                    "_futureDebt": "ID of the loan to approve"
+                },
+                "return": "_futureDebt XOR keccak256(\"approve-loan-request\"), if the approve is accepted"
+            },
+            "settleApproveRequest(bytes,bytes,bool,uint256)": {
+                "params": {
+                    "_id": "loanManager.requestSignature(_requestDatam _loanData)",
+                    "_isBorrower": "True if this contract is the borrower, False if the contract is the creator",
+                    "_loanData": "Data to feed to the Model",
+                    "_requestData": "All the parameters of the loan request"
+                },
+                "return": "_id XOR keccak256(\"approve-loan-request\"), if the approve is accepted"
+            },
+            "supportsInterface(bytes4)": {
+                "details": "Interface identification is specified in ERC-165. This function  uses less than 30,000 gas.",
+                "params": {
+                    "interfaceID": "The interface identifier, as specified in ERC-165"
+                },
+                "return": "`true` if the contract implements `interfaceID` and  `interfaceID` is not 0xffffffff, `false` otherwise"
+            }
+        }
+    },
+    "userdoc": {
+        "methods": {
+            "approveRequest(bytes32)": {
+                "notice": "Request the approve of a loan created using requestLoan, if the borrower is this contract, to approve the request the contract should return: _futureDebt XOR 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a"
+            },
+            "settleApproveRequest(bytes,bytes,bool,uint256)": {
+                "notice": "Request the approve of a loan being settled, the contract can be called as borrower or creator. To approve the request the contract should return: _id XOR 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a"
+            },
+            "supportsInterface(bytes4)": {
+                "notice": "Query if a contract implements an interface"
+            }
+        },
+        "notice": "A contract implementing LoanApprover is able to approve loan requests using callbacks, to approve a loan the contract should respond the callbacks the result of one designated value XOR keccak256(\"approve-loan-request\") keccak256(\"approve-loan-request\"): 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a To receive calls on the callbacks, the contract should also implement the following ERC165 interfaces: approveRequest: 0x76ba6009 settleApproveRequest: 0xcd40239e LoanApprover: 0xbbfa4397"
+    }
+}

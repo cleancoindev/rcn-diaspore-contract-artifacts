@@ -1167,10 +1167,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        15616,
-                        15617
+                        15679,
+                        15680
                       ],
-                      "referencedDeclaration": 15616,
+                      "referencedDeclaration": 15679,
                       "src": "1612:7:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2800,10 +2800,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        15616,
-                        15617
+                        15679,
+                        15680
                       ],
-                      "referencedDeclaration": 15616,
+                      "referencedDeclaration": 15679,
                       "src": "1612:7:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3475,7 +3475,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-05-15T18:47:52.182Z",
+  "updatedAt": "2019-05-15T18:54:11.025Z",
   "devdoc": {
     "details": "Defines the interface of a standard RCN oracle. The oracle is an agent in the RCN network that supplies a convertion rate between RCN and any other currency, it's primarily used by the exchange but could be used by any other agent.",
     "methods": {

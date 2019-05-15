@@ -562,14 +562,14 @@
     "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/Model.sol",
     "exportedSymbols": {
       "Model": [
-        9049
+        9112
       ]
     },
-    "id": 9050,
+    "id": 9113,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8852,
+        "id": 8915,
         "literals": [
           "solidity",
           "^",
@@ -582,10 +582,10 @@
       {
         "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/IERC165.sol",
         "file": "../../../interfaces/IERC165.sol",
-        "id": 8853,
+        "id": 8916,
         "nodeType": "ImportDirective",
-        "scope": 9050,
-        "sourceUnit": 12493,
+        "scope": 9113,
+        "sourceUnit": 12556,
         "src": "25:41:16",
         "symbolAliases": [],
         "unitAlias": ""
@@ -596,31 +596,31 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 8854,
+              "id": 8917,
               "name": "IERC165",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 12492,
+              "referencedDeclaration": 12555,
               "src": "692:7:16",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IERC165_$12492",
+                "typeIdentifier": "t_contract$_IERC165_$12555",
                 "typeString": "contract IERC165"
               }
             },
-            "id": 8855,
+            "id": 8918,
             "nodeType": "InheritanceSpecifier",
             "src": "692:7:16"
           }
         ],
         "contractDependencies": [
-          12492
+          12555
         ],
         "contractKind": "contract",
         "documentation": "The abstract contract Model defines the whole lifecycle of a debt on the DebtEngine.\nModels can be used without previous approbation, this is meant\nto avoid centralization on the development of RCN; this implies that not all models are secure.\nModels can have back-doors, bugs and they have not guarantee of being autonomous.\nThe DebtEngine is meant to be the User of this model,\nso all the methods with the ability to perform state changes should only be callable by the DebtEngine.\nAll models should implement the 0xaf498c35 interface.\n@author Agustin Aguilar",
         "fullyImplemented": false,
-        "id": 9049,
+        "id": 9112,
         "linearizedBaseContracts": [
-          9049,
-          12492
+          9112,
+          12555
         ],
         "name": "Model",
         "nodeType": "ContractDefinition",
@@ -628,20 +628,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when create a new debt.",
-            "id": 8859,
+            "id": 8922,
             "name": "Created",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8858,
+              "id": 8921,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8857,
+                  "id": 8920,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8859,
+                  "scope": 8922,
                   "src": "820:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -650,7 +650,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8856,
+                    "id": 8919,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "820:7:16",
@@ -670,20 +670,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the status of debt change.\n@param _timestamp Timestamp of the registry\n@param _status New status of the registry",
-            "id": 8867,
+            "id": 8930,
             "name": "ChangedStatus",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8866,
+              "id": 8929,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8861,
+                  "id": 8924,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8867,
+                  "scope": 8930,
                   "src": "1041:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -692,7 +692,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8860,
+                    "id": 8923,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1041:7:16",
@@ -706,11 +706,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8863,
+                  "id": 8926,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8867,
+                  "scope": 8930,
                   "src": "1062:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -719,7 +719,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8862,
+                    "id": 8925,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1062:7:16",
@@ -733,11 +733,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8865,
+                  "id": 8928,
                   "indexed": false,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8867,
+                  "scope": 8930,
                   "src": "1082:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -746,7 +746,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8864,
+                    "id": 8927,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1082:7:16",
@@ -766,20 +766,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the obligation of debt change.\n@param _timestamp Timestamp of the registry\n@param _debt New debt of the registry",
-            "id": 8875,
+            "id": 8938,
             "name": "ChangedObligation",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8874,
+              "id": 8937,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8869,
+                  "id": 8932,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8875,
+                  "scope": 8938,
                   "src": "1303:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -788,7 +788,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8868,
+                    "id": 8931,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1303:7:16",
@@ -802,11 +802,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8871,
+                  "id": 8934,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8875,
+                  "scope": 8938,
                   "src": "1324:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -815,7 +815,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8870,
+                    "id": 8933,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1324:7:16",
@@ -829,11 +829,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8873,
+                  "id": 8936,
                   "indexed": false,
                   "name": "_debt",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8875,
+                  "scope": 8938,
                   "src": "1344:13:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -842,7 +842,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8872,
+                    "id": 8935,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1344:7:16",
@@ -862,20 +862,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the frequency of debt change.\n@param _timestamp Timestamp of the registry\n@param _frequency New frequency of each installment",
-            "id": 8883,
+            "id": 8946,
             "name": "ChangedFrequency",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8882,
+              "id": 8945,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8877,
+                  "id": 8940,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8883,
+                  "scope": 8946,
                   "src": "1575:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -884,7 +884,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8876,
+                    "id": 8939,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1575:7:16",
@@ -898,11 +898,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8879,
+                  "id": 8942,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8883,
+                  "scope": 8946,
                   "src": "1596:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -911,7 +911,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8878,
+                    "id": 8941,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1596:7:16",
@@ -925,11 +925,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8881,
+                  "id": 8944,
                   "indexed": false,
                   "name": "_frequency",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8883,
+                  "scope": 8946,
                   "src": "1616:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -938,7 +938,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8880,
+                    "id": 8943,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1616:7:16",
@@ -958,20 +958,20 @@
           {
             "anonymous": false,
             "documentation": "@param _timestamp Timestamp of the registry",
-            "id": 8891,
+            "id": 8954,
             "name": "ChangedDueTime",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8890,
+              "id": 8953,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8885,
+                  "id": 8948,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8891,
+                  "scope": 8954,
                   "src": "1730:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -980,7 +980,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8884,
+                    "id": 8947,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1730:7:16",
@@ -994,11 +994,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8887,
+                  "id": 8950,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8891,
+                  "scope": 8954,
                   "src": "1751:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1007,7 +1007,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8886,
+                    "id": 8949,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1751:7:16",
@@ -1021,11 +1021,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8889,
+                  "id": 8952,
                   "indexed": false,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8891,
+                  "scope": 8954,
                   "src": "1771:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1034,7 +1034,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8888,
+                    "id": 8951,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1771:7:16",
@@ -1054,20 +1054,20 @@
           {
             "anonymous": false,
             "documentation": "@param _timestamp Timestamp of the registry\n@param _dueTime New dueTime of each installment",
-            "id": 8899,
+            "id": 8962,
             "name": "ChangedFinalTime",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8898,
+              "id": 8961,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8893,
+                  "id": 8956,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8899,
+                  "scope": 8962,
                   "src": "1940:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1076,7 +1076,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8892,
+                    "id": 8955,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1940:7:16",
@@ -1090,11 +1090,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8895,
+                  "id": 8958,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8899,
+                  "scope": 8962,
                   "src": "1961:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1103,7 +1103,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8894,
+                    "id": 8957,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1961:7:16",
@@ -1117,11 +1117,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8897,
+                  "id": 8960,
                   "indexed": false,
                   "name": "_dueTime",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8899,
+                  "scope": 8962,
                   "src": "1981:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1130,7 +1130,7 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 8896,
+                    "id": 8959,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "1981:6:16",
@@ -1150,20 +1150,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the call addDebt function.\n@param _amount New amount of the debt, old amount plus added",
-            "id": 8905,
+            "id": 8968,
             "name": "AddedDebt",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8904,
+              "id": 8967,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8901,
+                  "id": 8964,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8905,
+                  "scope": 8968,
                   "src": "2161:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1172,7 +1172,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8900,
+                    "id": 8963,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2161:7:16",
@@ -1186,11 +1186,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8903,
+                  "id": 8966,
                   "indexed": false,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8905,
+                  "scope": 8968,
                   "src": "2182:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1199,7 +1199,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8902,
+                    "id": 8965,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2182:7:16",
@@ -1219,20 +1219,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the call addPaid function.\nIf the registry is fully paid on the call and the amount parameter exceeds the required\npayment amount, the event emits the real amount paid on the payment.\n@param _paid Real amount paid",
-            "id": 8911,
+            "id": 8974,
             "name": "AddedPaid",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8910,
+              "id": 8973,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8907,
+                  "id": 8970,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8911,
+                  "scope": 8974,
                   "src": "2509:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1241,7 +1241,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8906,
+                    "id": 8969,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2509:7:16",
@@ -1255,11 +1255,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8909,
+                  "id": 8972,
                   "indexed": false,
                   "name": "_paid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8911,
+                  "scope": 8974,
                   "src": "2530:13:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1268,7 +1268,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8908,
+                    "id": 8971,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2530:7:16",
@@ -1287,10 +1287,10 @@
           },
           {
             "constant": true,
-            "id": 8914,
+            "id": 8977,
             "name": "MODEL_INTERFACE",
             "nodeType": "VariableDeclaration",
-            "scope": 9049,
+            "scope": 9112,
             "src": "2583:53:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1299,7 +1299,7 @@
               "typeString": "bytes4"
             },
             "typeName": {
-              "id": 8912,
+              "id": 8975,
               "name": "bytes4",
               "nodeType": "ElementaryTypeName",
               "src": "2583:6:16",
@@ -1311,7 +1311,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30786166343938633335",
-              "id": 8913,
+              "id": 8976,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1330,10 +1330,10 @@
           },
           {
             "constant": true,
-            "id": 8917,
+            "id": 8980,
             "name": "STATUS_ONGOING",
             "nodeType": "VariableDeclaration",
-            "scope": 9049,
+            "scope": 9112,
             "src": "2643:42:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1342,7 +1342,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8915,
+              "id": 8978,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "2643:7:16",
@@ -1354,7 +1354,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "31",
-              "id": 8916,
+              "id": 8979,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1373,10 +1373,10 @@
           },
           {
             "constant": true,
-            "id": 8920,
+            "id": 8983,
             "name": "STATUS_PAID",
             "nodeType": "VariableDeclaration",
-            "scope": 9049,
+            "scope": 9112,
             "src": "2691:39:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1385,7 +1385,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8918,
+              "id": 8981,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "2691:7:16",
@@ -1397,7 +1397,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "32",
-              "id": 8919,
+              "id": 8982,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1416,10 +1416,10 @@
           },
           {
             "constant": true,
-            "id": 8923,
+            "id": 8986,
             "name": "STATUS_ERROR",
             "nodeType": "VariableDeclaration",
-            "scope": 9049,
+            "scope": 9112,
             "src": "2736:40:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1428,7 +1428,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8921,
+              "id": 8984,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "2736:7:16",
@@ -1440,7 +1440,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "34",
-              "id": 8922,
+              "id": 8985,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1460,28 +1460,28 @@
           {
             "body": null,
             "documentation": "@return Identifier of the model",
-            "id": 8928,
+            "id": 8991,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "modelId",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8924,
+              "id": 8987,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2889:2:16"
             },
             "returnParameters": {
-              "id": 8927,
+              "id": 8990,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8926,
+                  "id": 8989,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8928,
+                  "scope": 8991,
                   "src": "2915:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1490,7 +1490,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8925,
+                    "id": 8988,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2915:7:16",
@@ -1505,7 +1505,7 @@
               ],
               "src": "2914:9:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "2873:51:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -1514,28 +1514,28 @@
           {
             "body": null,
             "documentation": "Returns the address of the contract used as Descriptor of the model\n@dev The descriptor contract should follow the ModelDescriptor.sol scheme\n@return Address of the descriptor",
-            "id": 8933,
+            "id": 8996,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "descriptor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8929,
+              "id": 8992,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3166:2:16"
             },
             "returnParameters": {
-              "id": 8932,
+              "id": 8995,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8931,
+                  "id": 8994,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8933,
+                  "scope": 8996,
                   "src": "3192:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1544,7 +1544,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 8930,
+                    "id": 8993,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3192:7:16",
@@ -1560,7 +1560,7 @@
               ],
               "src": "3191:9:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "3147:54:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -1569,22 +1569,22 @@
           {
             "body": null,
             "documentation": "If called for any address with the ability to modify the state of the model registries,\nthis method should return True.\n@dev Some contracts may check if the DebtEngine is\nan operator to know if the model is operative or not.\n@param operator Address of the target request operator\n@return True if operator is able to modify the state of the model",
-            "id": 8940,
+            "id": 9003,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isOperator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8936,
+              "id": 8999,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8935,
+                  "id": 8998,
                   "name": "operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8940,
+                  "scope": 9003,
                   "src": "3647:16:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1593,7 +1593,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 8934,
+                    "id": 8997,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3647:7:16",
@@ -1610,15 +1610,15 @@
               "src": "3646:18:16"
             },
             "returnParameters": {
-              "id": 8939,
+              "id": 9002,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8938,
+                  "id": 9001,
                   "name": "canOperate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8940,
+                  "scope": 9003,
                   "src": "3688:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1627,7 +1627,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 8937,
+                    "id": 9000,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3688:4:16",
@@ -1642,7 +1642,7 @@
               ],
               "src": "3687:17:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "3627:78:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -1651,22 +1651,22 @@
           {
             "body": null,
             "documentation": "Validates the data for the creation of a new registry, if returns True the\nsame data should be compatible with the create method.\n@dev This method can revert the call or return false, and both meant an invalid data.\n@param data Data to validate\n@return True if the data can be used to create a new registry",
-            "id": 8947,
+            "id": 9010,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "validate",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8943,
+              "id": 9006,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8942,
+                  "id": 9005,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8947,
+                  "scope": 9010,
                   "src": "4098:19:16",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -1675,7 +1675,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 8941,
+                    "id": 9004,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "4098:5:16",
@@ -1691,15 +1691,15 @@
               "src": "4097:21:16"
             },
             "returnParameters": {
-              "id": 8946,
+              "id": 9009,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8945,
+                  "id": 9008,
                   "name": "isValid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8947,
+                  "scope": 9010,
                   "src": "4142:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1708,7 +1708,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 8944,
+                    "id": 9007,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4142:4:16",
@@ -1723,7 +1723,7 @@
               ],
               "src": "4141:14:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "4080:76:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -1732,22 +1732,22 @@
           {
             "body": null,
             "documentation": "Exposes the current status of the registry. The possible values are:\n1: Ongoing - The debt is still ongoing and waiting to be paid\n2: Paid - The debt is already paid and\n4: Error - There was an Error with the registry\n@dev This method should always be called by the DebtEngine\n@param id Id of the registry\n@return The current status value",
-            "id": 8954,
+            "id": 9017,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8950,
+              "id": 9013,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8949,
+                  "id": 9012,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8954,
+                  "scope": 9017,
                   "src": "4633:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1756,7 +1756,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8948,
+                    "id": 9011,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "4633:7:16",
@@ -1772,15 +1772,15 @@
               "src": "4632:12:16"
             },
             "returnParameters": {
-              "id": 8953,
+              "id": 9016,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8952,
+                  "id": 9015,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8954,
+                  "scope": 9017,
                   "src": "4668:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1789,7 +1789,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8951,
+                    "id": 9014,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4668:7:16",
@@ -1804,7 +1804,7 @@
               ],
               "src": "4667:16:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "4614:70:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -1813,22 +1813,22 @@
           {
             "body": null,
             "documentation": "Returns the total paid amount on the registry.\n@dev it should equal to the sum of all real addPaid\n@param id Id of the registry\n@return Total paid amount",
-            "id": 8961,
+            "id": 9024,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getPaid",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8957,
+              "id": 9020,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8956,
+                  "id": 9019,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8961,
+                  "scope": 9024,
                   "src": "4911:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1837,7 +1837,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8955,
+                    "id": 9018,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "4911:7:16",
@@ -1853,15 +1853,15 @@
               "src": "4910:12:16"
             },
             "returnParameters": {
-              "id": 8960,
+              "id": 9023,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8959,
+                  "id": 9022,
                   "name": "paid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8961,
+                  "scope": 9024,
                   "src": "4946:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1870,7 +1870,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8958,
+                    "id": 9021,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4946:7:16",
@@ -1885,7 +1885,7 @@
               ],
               "src": "4945:14:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "4894:66:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -1894,22 +1894,22 @@
           {
             "body": null,
             "documentation": "If the returned amount does not depend on any interactions and only on the model logic,\nthe defined flag will be True; if the amount is an estimation of the future debt,\nthe flag will be set to False.\nIf timestamp equals the current moment, the defined flag should always be True.\n@dev This can be a gas-intensive method to call, consider calling the run method before.\n@param id Id of the registry\n@param timestamp Timestamp of the obligation query\n@return amount Amount pending to pay on the given timestamp\n@return defined True If the amount returned is fixed and can't change",
-            "id": 8972,
+            "id": 9035,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getObligation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8966,
+              "id": 9029,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8963,
+                  "id": 9026,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8972,
+                  "scope": 9035,
                   "src": "5668:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1918,7 +1918,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8962,
+                    "id": 9025,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "5668:7:16",
@@ -1932,10 +1932,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 8965,
+                  "id": 9028,
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8972,
+                  "scope": 9035,
                   "src": "5680:16:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1944,7 +1944,7 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 8964,
+                    "id": 9027,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "5680:6:16",
@@ -1960,15 +1960,15 @@
               "src": "5667:30:16"
             },
             "returnParameters": {
-              "id": 8971,
+              "id": 9034,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8968,
+                  "id": 9031,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8972,
+                  "scope": 9035,
                   "src": "5721:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1977,7 +1977,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8967,
+                    "id": 9030,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "5721:7:16",
@@ -1991,10 +1991,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 8970,
+                  "id": 9033,
                   "name": "defined",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8972,
+                  "scope": 9035,
                   "src": "5737:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2003,7 +2003,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 8969,
+                    "id": 9032,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "5737:4:16",
@@ -2018,7 +2018,7 @@
               ],
               "src": "5720:30:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "5645:106:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -2027,22 +2027,22 @@
           {
             "body": null,
             "documentation": "The amount required to fully paid a registry.\nAll registries should be payable in a single time, even when it has multiple installments.\nIf the registry discounts interest for early payment, those discounts should be\ntaken into account in the returned amount.\n@dev This can be a gas-intensive method to call, consider calling the run method before.\n@param id Id of the registry\n@return amount Amount required to fully paid the loan on the current timestamp",
-            "id": 8979,
+            "id": 9042,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getClosingObligation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8975,
+              "id": 9038,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8974,
+                  "id": 9037,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8979,
+                  "scope": 9042,
                   "src": "6324:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2051,7 +2051,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8973,
+                    "id": 9036,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "6324:7:16",
@@ -2067,15 +2067,15 @@
               "src": "6323:12:16"
             },
             "returnParameters": {
-              "id": 8978,
+              "id": 9041,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8977,
+                  "id": 9040,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8979,
+                  "scope": 9042,
                   "src": "6359:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2084,7 +2084,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8976,
+                    "id": 9039,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "6359:7:16",
@@ -2099,7 +2099,7 @@
               ],
               "src": "6358:16:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "6294:81:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -2108,22 +2108,22 @@
           {
             "body": null,
             "documentation": "The timestamp of the next required payment.\nAfter this moment, if the payment goal is not met the debt will be considered overdue.\nThe getObligation method can be used to know the required payment on the future timestamp.\n@param id Id of the registry\n@return timestamp The timestamp of the next due time",
-            "id": 8986,
+            "id": 9049,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getDueTime",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8982,
+              "id": 9045,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8981,
+                  "id": 9044,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8986,
+                  "scope": 9049,
                   "src": "6768:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2132,7 +2132,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8980,
+                    "id": 9043,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "6768:7:16",
@@ -2148,15 +2148,15 @@
               "src": "6767:12:16"
             },
             "returnParameters": {
-              "id": 8985,
+              "id": 9048,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8984,
+                  "id": 9047,
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8986,
+                  "scope": 9049,
                   "src": "6803:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2165,7 +2165,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8983,
+                    "id": 9046,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "6803:7:16",
@@ -2180,7 +2180,7 @@
               ],
               "src": "6802:19:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "6748:74:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -2189,22 +2189,22 @@
           {
             "body": null,
             "documentation": "If the loan has multiple installments returns the duration of each installment in seconds,\nif the loan has not installments it should return 1.\n@param id Id of the registry\n@return frequency Frequency of each installment",
-            "id": 8993,
+            "id": 9056,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getFrequency",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8989,
+              "id": 9052,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8988,
+                  "id": 9051,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8993,
+                  "scope": 9056,
                   "src": "7163:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2213,7 +2213,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8987,
+                    "id": 9050,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "7163:7:16",
@@ -2229,15 +2229,15 @@
               "src": "7162:12:16"
             },
             "returnParameters": {
-              "id": 8992,
+              "id": 9055,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8991,
+                  "id": 9054,
                   "name": "frequency",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8993,
+                  "scope": 9056,
                   "src": "7198:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2246,7 +2246,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8990,
+                    "id": 9053,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "7198:7:16",
@@ -2261,7 +2261,7 @@
               ],
               "src": "7197:19:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "7141:76:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -2270,22 +2270,22 @@
           {
             "body": null,
             "documentation": "If the loan has multiple installments returns the total of installments,\nif the loan has not installments it should return 1.\n@param id Id of the registry\n@return installments Total of installments",
-            "id": 9000,
+            "id": 9063,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getInstallments",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8996,
+              "id": 9059,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8995,
+                  "id": 9058,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9000,
+                  "scope": 9063,
                   "src": "7499:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2294,7 +2294,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8994,
+                    "id": 9057,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "7499:7:16",
@@ -2310,15 +2310,15 @@
               "src": "7498:12:16"
             },
             "returnParameters": {
-              "id": 8999,
+              "id": 9062,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8998,
+                  "id": 9061,
                   "name": "installments",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9000,
+                  "scope": 9063,
                   "src": "7534:20:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2327,7 +2327,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8997,
+                    "id": 9060,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "7534:7:16",
@@ -2342,7 +2342,7 @@
               ],
               "src": "7533:22:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "7474:82:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -2351,22 +2351,22 @@
           {
             "body": null,
             "documentation": "The registry could be paid before or after the date, but the debt will always be\nconsidered overdue if paid after this timestamp.\nThis is the estimated final payment date of the debt if it's always paid on each exact dueTime.\n@param id Id of the registry\n@return timestamp Timestamp of the final due time",
-            "id": 9007,
+            "id": 9070,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getFinalTime",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9003,
+              "id": 9066,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9002,
+                  "id": 9065,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9007,
+                  "scope": 9070,
                   "src": "7951:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2375,7 +2375,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9001,
+                    "id": 9064,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "7951:7:16",
@@ -2391,15 +2391,15 @@
               "src": "7950:12:16"
             },
             "returnParameters": {
-              "id": 9006,
+              "id": 9069,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9005,
+                  "id": 9068,
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9007,
+                  "scope": 9070,
                   "src": "7986:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2408,7 +2408,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9004,
+                    "id": 9067,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "7986:7:16",
@@ -2423,7 +2423,7 @@
               ],
               "src": "7985:19:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "7929:76:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -2432,22 +2432,22 @@
           {
             "body": null,
             "documentation": "Similar to getFinalTime returns the expected payment remaining if paid always on the exact dueTime.\nIf the model has no interest discounts for early payments,\nthis method should return the same value as getClosingObligation.\n@param id Id of the registry\n@return amount Expected payment amount",
-            "id": 9014,
+            "id": 9077,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getEstimateObligation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9010,
+              "id": 9073,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9009,
+                  "id": 9072,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9014,
+                  "scope": 9077,
                   "src": "8397:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2456,7 +2456,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9008,
+                    "id": 9071,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "8397:7:16",
@@ -2472,15 +2472,15 @@
               "src": "8396:12:16"
             },
             "returnParameters": {
-              "id": 9013,
+              "id": 9076,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9012,
+                  "id": 9075,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9014,
+                  "scope": 9077,
                   "src": "8432:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2489,7 +2489,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9011,
+                    "id": 9074,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "8432:7:16",
@@ -2504,7 +2504,7 @@
               ],
               "src": "8431:16:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "8366:82:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -2513,22 +2513,22 @@
           {
             "body": null,
             "documentation": "Creates a new registry using the provided data and id, it should fail if the id already exists\nor if calling validate(data) returns false or throws.\n@dev This method should only be callable by an operator\n@param id Id of the registry to create\n@param data Data to construct the new registry\n@return success True if the registry was created",
-            "id": 9023,
+            "id": 9086,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "create",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9019,
+              "id": 9082,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9016,
+                  "id": 9079,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9023,
+                  "scope": 9086,
                   "src": "8926:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2537,7 +2537,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9015,
+                    "id": 9078,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "8926:7:16",
@@ -2551,10 +2551,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9018,
+                  "id": 9081,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9023,
+                  "scope": 9086,
                   "src": "8938:19:16",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -2563,7 +2563,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 9017,
+                    "id": 9080,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "8938:5:16",
@@ -2579,15 +2579,15 @@
               "src": "8925:33:16"
             },
             "returnParameters": {
-              "id": 9022,
+              "id": 9085,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9021,
+                  "id": 9084,
                   "name": "success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9023,
+                  "scope": 9086,
                   "src": "8977:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2596,7 +2596,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9020,
+                    "id": 9083,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "8977:4:16",
@@ -2611,7 +2611,7 @@
               ],
               "src": "8976:14:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "8910:81:16",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2620,22 +2620,22 @@
           {
             "body": null,
             "documentation": "If the registry is fully paid on the call and the amount parameter exceeds the required\npayment amount, the method returns the real amount used on the payment.\nThe payment taken should always be the same as the requested unless the registry\nis fully paid on the process.\n@dev This method should only be callable by an operator\n@param id If of the registry\n@param amount Amount to pay\n@return real Real amount paid",
-            "id": 9032,
+            "id": 9095,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addPaid",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9028,
+              "id": 9091,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9025,
+                  "id": 9088,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9032,
+                  "scope": 9095,
                   "src": "9519:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2644,7 +2644,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9024,
+                    "id": 9087,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "9519:7:16",
@@ -2658,10 +2658,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9027,
+                  "id": 9090,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9032,
+                  "scope": 9095,
                   "src": "9531:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2670,7 +2670,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9026,
+                    "id": 9089,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "9531:7:16",
@@ -2686,15 +2686,15 @@
               "src": "9518:28:16"
             },
             "returnParameters": {
-              "id": 9031,
+              "id": 9094,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9030,
+                  "id": 9093,
                   "name": "real",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9032,
+                  "scope": 9095,
                   "src": "9565:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2703,7 +2703,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9029,
+                    "id": 9092,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "9565:7:16",
@@ -2718,7 +2718,7 @@
               ],
               "src": "9564:14:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "9502:77:16",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2727,22 +2727,22 @@
           {
             "body": null,
             "documentation": "Adds a new amount to be paid on the debt model,\neach model can handle the addition of more debt freely.\n@dev This method should only be callable by an operator\n@param id Id of the registry\n@param amount Debt amount to add to the registry\n@return added True if the debt was added",
-            "id": 9041,
+            "id": 9104,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addDebt",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9037,
+              "id": 9100,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9034,
+                  "id": 9097,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9041,
+                  "scope": 9104,
                   "src": "9951:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2751,7 +2751,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9033,
+                    "id": 9096,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "9951:7:16",
@@ -2765,10 +2765,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9036,
+                  "id": 9099,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9041,
+                  "scope": 9104,
                   "src": "9963:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2777,7 +2777,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9035,
+                    "id": 9098,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "9963:7:16",
@@ -2793,15 +2793,15 @@
               "src": "9950:28:16"
             },
             "returnParameters": {
-              "id": 9040,
+              "id": 9103,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9039,
+                  "id": 9102,
                   "name": "added",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9041,
+                  "scope": 9104,
                   "src": "9997:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2810,7 +2810,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9038,
+                    "id": 9101,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "9997:4:16",
@@ -2825,7 +2825,7 @@
               ],
               "src": "9996:12:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "9934:75:16",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2834,22 +2834,22 @@
           {
             "body": null,
             "documentation": "Runs the internal clock of a registry, this is used to compute the last changes on the state.\nIt can make transactions cheaper by avoiding multiple calculations when calling views.\nNot all models have internal clocks, a model without an internal clock should always return false.\nCalls to this method should be possible from any address,\nmultiple calls to run shouldn't affect the internal calculations of the model.\n@dev If the call had no effect the method would return False,\nthat is no sign of things going wrong, and the call shouldn't be wrapped on a require\n@param id If of the registry\n@return effect True if the run performed a change on the state",
-            "id": 9048,
+            "id": 9111,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "run",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9044,
+              "id": 9107,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9043,
+                  "id": 9106,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9048,
+                  "scope": 9111,
                   "src": "10825:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2858,7 +2858,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9042,
+                    "id": 9105,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "10825:7:16",
@@ -2874,15 +2874,15 @@
               "src": "10824:12:16"
             },
             "returnParameters": {
-              "id": 9047,
+              "id": 9110,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9046,
+                  "id": 9109,
                   "name": "effect",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9048,
+                  "scope": 9111,
                   "src": "10855:11:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2891,7 +2891,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9045,
+                    "id": 9108,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "10855:4:16",
@@ -2906,14 +2906,14 @@
               ],
               "src": "10854:13:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "10812:56:16",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 9050,
+        "scope": 9113,
         "src": "674:10196:16"
       }
     ],
@@ -2923,14 +2923,14 @@
     "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/core/diaspore/interfaces/Model.sol",
     "exportedSymbols": {
       "Model": [
-        9049
+        9112
       ]
     },
-    "id": 9050,
+    "id": 9113,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8852,
+        "id": 8915,
         "literals": [
           "solidity",
           "^",
@@ -2943,10 +2943,10 @@
       {
         "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/IERC165.sol",
         "file": "../../../interfaces/IERC165.sol",
-        "id": 8853,
+        "id": 8916,
         "nodeType": "ImportDirective",
-        "scope": 9050,
-        "sourceUnit": 12493,
+        "scope": 9113,
+        "sourceUnit": 12556,
         "src": "25:41:16",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2957,31 +2957,31 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 8854,
+              "id": 8917,
               "name": "IERC165",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 12492,
+              "referencedDeclaration": 12555,
               "src": "692:7:16",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IERC165_$12492",
+                "typeIdentifier": "t_contract$_IERC165_$12555",
                 "typeString": "contract IERC165"
               }
             },
-            "id": 8855,
+            "id": 8918,
             "nodeType": "InheritanceSpecifier",
             "src": "692:7:16"
           }
         ],
         "contractDependencies": [
-          12492
+          12555
         ],
         "contractKind": "contract",
         "documentation": "The abstract contract Model defines the whole lifecycle of a debt on the DebtEngine.\nModels can be used without previous approbation, this is meant\nto avoid centralization on the development of RCN; this implies that not all models are secure.\nModels can have back-doors, bugs and they have not guarantee of being autonomous.\nThe DebtEngine is meant to be the User of this model,\nso all the methods with the ability to perform state changes should only be callable by the DebtEngine.\nAll models should implement the 0xaf498c35 interface.\n@author Agustin Aguilar",
         "fullyImplemented": false,
-        "id": 9049,
+        "id": 9112,
         "linearizedBaseContracts": [
-          9049,
-          12492
+          9112,
+          12555
         ],
         "name": "Model",
         "nodeType": "ContractDefinition",
@@ -2989,20 +2989,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when create a new debt.",
-            "id": 8859,
+            "id": 8922,
             "name": "Created",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8858,
+              "id": 8921,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8857,
+                  "id": 8920,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8859,
+                  "scope": 8922,
                   "src": "820:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3011,7 +3011,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8856,
+                    "id": 8919,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "820:7:16",
@@ -3031,20 +3031,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the status of debt change.\n@param _timestamp Timestamp of the registry\n@param _status New status of the registry",
-            "id": 8867,
+            "id": 8930,
             "name": "ChangedStatus",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8866,
+              "id": 8929,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8861,
+                  "id": 8924,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8867,
+                  "scope": 8930,
                   "src": "1041:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3053,7 +3053,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8860,
+                    "id": 8923,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1041:7:16",
@@ -3067,11 +3067,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8863,
+                  "id": 8926,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8867,
+                  "scope": 8930,
                   "src": "1062:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3080,7 +3080,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8862,
+                    "id": 8925,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1062:7:16",
@@ -3094,11 +3094,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8865,
+                  "id": 8928,
                   "indexed": false,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8867,
+                  "scope": 8930,
                   "src": "1082:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3107,7 +3107,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8864,
+                    "id": 8927,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1082:7:16",
@@ -3127,20 +3127,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the obligation of debt change.\n@param _timestamp Timestamp of the registry\n@param _debt New debt of the registry",
-            "id": 8875,
+            "id": 8938,
             "name": "ChangedObligation",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8874,
+              "id": 8937,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8869,
+                  "id": 8932,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8875,
+                  "scope": 8938,
                   "src": "1303:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3149,7 +3149,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8868,
+                    "id": 8931,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1303:7:16",
@@ -3163,11 +3163,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8871,
+                  "id": 8934,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8875,
+                  "scope": 8938,
                   "src": "1324:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3176,7 +3176,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8870,
+                    "id": 8933,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1324:7:16",
@@ -3190,11 +3190,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8873,
+                  "id": 8936,
                   "indexed": false,
                   "name": "_debt",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8875,
+                  "scope": 8938,
                   "src": "1344:13:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3203,7 +3203,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8872,
+                    "id": 8935,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1344:7:16",
@@ -3223,20 +3223,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the frequency of debt change.\n@param _timestamp Timestamp of the registry\n@param _frequency New frequency of each installment",
-            "id": 8883,
+            "id": 8946,
             "name": "ChangedFrequency",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8882,
+              "id": 8945,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8877,
+                  "id": 8940,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8883,
+                  "scope": 8946,
                   "src": "1575:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3245,7 +3245,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8876,
+                    "id": 8939,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1575:7:16",
@@ -3259,11 +3259,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8879,
+                  "id": 8942,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8883,
+                  "scope": 8946,
                   "src": "1596:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3272,7 +3272,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8878,
+                    "id": 8941,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1596:7:16",
@@ -3286,11 +3286,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8881,
+                  "id": 8944,
                   "indexed": false,
                   "name": "_frequency",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8883,
+                  "scope": 8946,
                   "src": "1616:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3299,7 +3299,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8880,
+                    "id": 8943,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1616:7:16",
@@ -3319,20 +3319,20 @@
           {
             "anonymous": false,
             "documentation": "@param _timestamp Timestamp of the registry",
-            "id": 8891,
+            "id": 8954,
             "name": "ChangedDueTime",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8890,
+              "id": 8953,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8885,
+                  "id": 8948,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8891,
+                  "scope": 8954,
                   "src": "1730:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3341,7 +3341,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8884,
+                    "id": 8947,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1730:7:16",
@@ -3355,11 +3355,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8887,
+                  "id": 8950,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8891,
+                  "scope": 8954,
                   "src": "1751:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3368,7 +3368,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8886,
+                    "id": 8949,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1751:7:16",
@@ -3382,11 +3382,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8889,
+                  "id": 8952,
                   "indexed": false,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8891,
+                  "scope": 8954,
                   "src": "1771:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3395,7 +3395,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8888,
+                    "id": 8951,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1771:7:16",
@@ -3415,20 +3415,20 @@
           {
             "anonymous": false,
             "documentation": "@param _timestamp Timestamp of the registry\n@param _dueTime New dueTime of each installment",
-            "id": 8899,
+            "id": 8962,
             "name": "ChangedFinalTime",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8898,
+              "id": 8961,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8893,
+                  "id": 8956,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8899,
+                  "scope": 8962,
                   "src": "1940:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3437,7 +3437,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8892,
+                    "id": 8955,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1940:7:16",
@@ -3451,11 +3451,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8895,
+                  "id": 8958,
                   "indexed": false,
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8899,
+                  "scope": 8962,
                   "src": "1961:18:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3464,7 +3464,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8894,
+                    "id": 8957,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1961:7:16",
@@ -3478,11 +3478,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8897,
+                  "id": 8960,
                   "indexed": false,
                   "name": "_dueTime",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8899,
+                  "scope": 8962,
                   "src": "1981:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3491,7 +3491,7 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 8896,
+                    "id": 8959,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "1981:6:16",
@@ -3511,20 +3511,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the call addDebt function.\n@param _amount New amount of the debt, old amount plus added",
-            "id": 8905,
+            "id": 8968,
             "name": "AddedDebt",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8904,
+              "id": 8967,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8901,
+                  "id": 8964,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8905,
+                  "scope": 8968,
                   "src": "2161:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3533,7 +3533,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8900,
+                    "id": 8963,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2161:7:16",
@@ -3547,11 +3547,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8903,
+                  "id": 8966,
                   "indexed": false,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8905,
+                  "scope": 8968,
                   "src": "2182:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3560,7 +3560,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8902,
+                    "id": 8965,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2182:7:16",
@@ -3580,20 +3580,20 @@
           {
             "anonymous": false,
             "documentation": "@dev This emits when the call addPaid function.\nIf the registry is fully paid on the call and the amount parameter exceeds the required\npayment amount, the event emits the real amount paid on the payment.\n@param _paid Real amount paid",
-            "id": 8911,
+            "id": 8974,
             "name": "AddedPaid",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 8910,
+              "id": 8973,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8907,
+                  "id": 8970,
                   "indexed": true,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8911,
+                  "scope": 8974,
                   "src": "2509:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3602,7 +3602,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8906,
+                    "id": 8969,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2509:7:16",
@@ -3616,11 +3616,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 8909,
+                  "id": 8972,
                   "indexed": false,
                   "name": "_paid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8911,
+                  "scope": 8974,
                   "src": "2530:13:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3629,7 +3629,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8908,
+                    "id": 8971,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2530:7:16",
@@ -3648,10 +3648,10 @@
           },
           {
             "constant": true,
-            "id": 8914,
+            "id": 8977,
             "name": "MODEL_INTERFACE",
             "nodeType": "VariableDeclaration",
-            "scope": 9049,
+            "scope": 9112,
             "src": "2583:53:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3660,7 +3660,7 @@
               "typeString": "bytes4"
             },
             "typeName": {
-              "id": 8912,
+              "id": 8975,
               "name": "bytes4",
               "nodeType": "ElementaryTypeName",
               "src": "2583:6:16",
@@ -3672,7 +3672,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30786166343938633335",
-              "id": 8913,
+              "id": 8976,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -3691,10 +3691,10 @@
           },
           {
             "constant": true,
-            "id": 8917,
+            "id": 8980,
             "name": "STATUS_ONGOING",
             "nodeType": "VariableDeclaration",
-            "scope": 9049,
+            "scope": 9112,
             "src": "2643:42:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3703,7 +3703,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8915,
+              "id": 8978,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "2643:7:16",
@@ -3715,7 +3715,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "31",
-              "id": 8916,
+              "id": 8979,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -3734,10 +3734,10 @@
           },
           {
             "constant": true,
-            "id": 8920,
+            "id": 8983,
             "name": "STATUS_PAID",
             "nodeType": "VariableDeclaration",
-            "scope": 9049,
+            "scope": 9112,
             "src": "2691:39:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3746,7 +3746,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8918,
+              "id": 8981,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "2691:7:16",
@@ -3758,7 +3758,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "32",
-              "id": 8919,
+              "id": 8982,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -3777,10 +3777,10 @@
           },
           {
             "constant": true,
-            "id": 8923,
+            "id": 8986,
             "name": "STATUS_ERROR",
             "nodeType": "VariableDeclaration",
-            "scope": 9049,
+            "scope": 9112,
             "src": "2736:40:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3789,7 +3789,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8921,
+              "id": 8984,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "2736:7:16",
@@ -3801,7 +3801,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "34",
-              "id": 8922,
+              "id": 8985,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -3821,28 +3821,28 @@
           {
             "body": null,
             "documentation": "@return Identifier of the model",
-            "id": 8928,
+            "id": 8991,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "modelId",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8924,
+              "id": 8987,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2889:2:16"
             },
             "returnParameters": {
-              "id": 8927,
+              "id": 8990,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8926,
+                  "id": 8989,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8928,
+                  "scope": 8991,
                   "src": "2915:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3851,7 +3851,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8925,
+                    "id": 8988,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2915:7:16",
@@ -3866,7 +3866,7 @@
               ],
               "src": "2914:9:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "2873:51:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -3875,28 +3875,28 @@
           {
             "body": null,
             "documentation": "Returns the address of the contract used as Descriptor of the model\n@dev The descriptor contract should follow the ModelDescriptor.sol scheme\n@return Address of the descriptor",
-            "id": 8933,
+            "id": 8996,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "descriptor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8929,
+              "id": 8992,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "3166:2:16"
             },
             "returnParameters": {
-              "id": 8932,
+              "id": 8995,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8931,
+                  "id": 8994,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8933,
+                  "scope": 8996,
                   "src": "3192:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3905,7 +3905,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 8930,
+                    "id": 8993,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3192:7:16",
@@ -3921,7 +3921,7 @@
               ],
               "src": "3191:9:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "3147:54:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -3930,22 +3930,22 @@
           {
             "body": null,
             "documentation": "If called for any address with the ability to modify the state of the model registries,\nthis method should return True.\n@dev Some contracts may check if the DebtEngine is\nan operator to know if the model is operative or not.\n@param operator Address of the target request operator\n@return True if operator is able to modify the state of the model",
-            "id": 8940,
+            "id": 9003,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isOperator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8936,
+              "id": 8999,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8935,
+                  "id": 8998,
                   "name": "operator",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8940,
+                  "scope": 9003,
                   "src": "3647:16:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3954,7 +3954,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 8934,
+                    "id": 8997,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3647:7:16",
@@ -3971,15 +3971,15 @@
               "src": "3646:18:16"
             },
             "returnParameters": {
-              "id": 8939,
+              "id": 9002,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8938,
+                  "id": 9001,
                   "name": "canOperate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8940,
+                  "scope": 9003,
                   "src": "3688:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3988,7 +3988,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 8937,
+                    "id": 9000,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3688:4:16",
@@ -4003,7 +4003,7 @@
               ],
               "src": "3687:17:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "3627:78:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4012,22 +4012,22 @@
           {
             "body": null,
             "documentation": "Validates the data for the creation of a new registry, if returns True the\nsame data should be compatible with the create method.\n@dev This method can revert the call or return false, and both meant an invalid data.\n@param data Data to validate\n@return True if the data can be used to create a new registry",
-            "id": 8947,
+            "id": 9010,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "validate",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8943,
+              "id": 9006,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8942,
+                  "id": 9005,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8947,
+                  "scope": 9010,
                   "src": "4098:19:16",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -4036,7 +4036,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 8941,
+                    "id": 9004,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "4098:5:16",
@@ -4052,15 +4052,15 @@
               "src": "4097:21:16"
             },
             "returnParameters": {
-              "id": 8946,
+              "id": 9009,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8945,
+                  "id": 9008,
                   "name": "isValid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8947,
+                  "scope": 9010,
                   "src": "4142:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4069,7 +4069,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 8944,
+                    "id": 9007,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4142:4:16",
@@ -4084,7 +4084,7 @@
               ],
               "src": "4141:14:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "4080:76:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4093,22 +4093,22 @@
           {
             "body": null,
             "documentation": "Exposes the current status of the registry. The possible values are:\n1: Ongoing - The debt is still ongoing and waiting to be paid\n2: Paid - The debt is already paid and\n4: Error - There was an Error with the registry\n@dev This method should always be called by the DebtEngine\n@param id Id of the registry\n@return The current status value",
-            "id": 8954,
+            "id": 9017,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8950,
+              "id": 9013,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8949,
+                  "id": 9012,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8954,
+                  "scope": 9017,
                   "src": "4633:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4117,7 +4117,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8948,
+                    "id": 9011,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "4633:7:16",
@@ -4133,15 +4133,15 @@
               "src": "4632:12:16"
             },
             "returnParameters": {
-              "id": 8953,
+              "id": 9016,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8952,
+                  "id": 9015,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8954,
+                  "scope": 9017,
                   "src": "4668:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4150,7 +4150,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8951,
+                    "id": 9014,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4668:7:16",
@@ -4165,7 +4165,7 @@
               ],
               "src": "4667:16:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "4614:70:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4174,22 +4174,22 @@
           {
             "body": null,
             "documentation": "Returns the total paid amount on the registry.\n@dev it should equal to the sum of all real addPaid\n@param id Id of the registry\n@return Total paid amount",
-            "id": 8961,
+            "id": 9024,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getPaid",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8957,
+              "id": 9020,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8956,
+                  "id": 9019,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8961,
+                  "scope": 9024,
                   "src": "4911:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4198,7 +4198,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8955,
+                    "id": 9018,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "4911:7:16",
@@ -4214,15 +4214,15 @@
               "src": "4910:12:16"
             },
             "returnParameters": {
-              "id": 8960,
+              "id": 9023,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8959,
+                  "id": 9022,
                   "name": "paid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8961,
+                  "scope": 9024,
                   "src": "4946:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4231,7 +4231,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8958,
+                    "id": 9021,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "4946:7:16",
@@ -4246,7 +4246,7 @@
               ],
               "src": "4945:14:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "4894:66:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4255,22 +4255,22 @@
           {
             "body": null,
             "documentation": "If the returned amount does not depend on any interactions and only on the model logic,\nthe defined flag will be True; if the amount is an estimation of the future debt,\nthe flag will be set to False.\nIf timestamp equals the current moment, the defined flag should always be True.\n@dev This can be a gas-intensive method to call, consider calling the run method before.\n@param id Id of the registry\n@param timestamp Timestamp of the obligation query\n@return amount Amount pending to pay on the given timestamp\n@return defined True If the amount returned is fixed and can't change",
-            "id": 8972,
+            "id": 9035,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getObligation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8966,
+              "id": 9029,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8963,
+                  "id": 9026,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8972,
+                  "scope": 9035,
                   "src": "5668:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4279,7 +4279,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8962,
+                    "id": 9025,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "5668:7:16",
@@ -4293,10 +4293,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 8965,
+                  "id": 9028,
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8972,
+                  "scope": 9035,
                   "src": "5680:16:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4305,7 +4305,7 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 8964,
+                    "id": 9027,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "5680:6:16",
@@ -4321,15 +4321,15 @@
               "src": "5667:30:16"
             },
             "returnParameters": {
-              "id": 8971,
+              "id": 9034,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8968,
+                  "id": 9031,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8972,
+                  "scope": 9035,
                   "src": "5721:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4338,7 +4338,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8967,
+                    "id": 9030,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "5721:7:16",
@@ -4352,10 +4352,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 8970,
+                  "id": 9033,
                   "name": "defined",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8972,
+                  "scope": 9035,
                   "src": "5737:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4364,7 +4364,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 8969,
+                    "id": 9032,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "5737:4:16",
@@ -4379,7 +4379,7 @@
               ],
               "src": "5720:30:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "5645:106:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4388,22 +4388,22 @@
           {
             "body": null,
             "documentation": "The amount required to fully paid a registry.\nAll registries should be payable in a single time, even when it has multiple installments.\nIf the registry discounts interest for early payment, those discounts should be\ntaken into account in the returned amount.\n@dev This can be a gas-intensive method to call, consider calling the run method before.\n@param id Id of the registry\n@return amount Amount required to fully paid the loan on the current timestamp",
-            "id": 8979,
+            "id": 9042,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getClosingObligation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8975,
+              "id": 9038,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8974,
+                  "id": 9037,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8979,
+                  "scope": 9042,
                   "src": "6324:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4412,7 +4412,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8973,
+                    "id": 9036,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "6324:7:16",
@@ -4428,15 +4428,15 @@
               "src": "6323:12:16"
             },
             "returnParameters": {
-              "id": 8978,
+              "id": 9041,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8977,
+                  "id": 9040,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8979,
+                  "scope": 9042,
                   "src": "6359:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4445,7 +4445,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8976,
+                    "id": 9039,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "6359:7:16",
@@ -4460,7 +4460,7 @@
               ],
               "src": "6358:16:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "6294:81:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4469,22 +4469,22 @@
           {
             "body": null,
             "documentation": "The timestamp of the next required payment.\nAfter this moment, if the payment goal is not met the debt will be considered overdue.\nThe getObligation method can be used to know the required payment on the future timestamp.\n@param id Id of the registry\n@return timestamp The timestamp of the next due time",
-            "id": 8986,
+            "id": 9049,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getDueTime",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8982,
+              "id": 9045,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8981,
+                  "id": 9044,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8986,
+                  "scope": 9049,
                   "src": "6768:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4493,7 +4493,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8980,
+                    "id": 9043,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "6768:7:16",
@@ -4509,15 +4509,15 @@
               "src": "6767:12:16"
             },
             "returnParameters": {
-              "id": 8985,
+              "id": 9048,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8984,
+                  "id": 9047,
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8986,
+                  "scope": 9049,
                   "src": "6803:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4526,7 +4526,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8983,
+                    "id": 9046,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "6803:7:16",
@@ -4541,7 +4541,7 @@
               ],
               "src": "6802:19:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "6748:74:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4550,22 +4550,22 @@
           {
             "body": null,
             "documentation": "If the loan has multiple installments returns the duration of each installment in seconds,\nif the loan has not installments it should return 1.\n@param id Id of the registry\n@return frequency Frequency of each installment",
-            "id": 8993,
+            "id": 9056,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getFrequency",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8989,
+              "id": 9052,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8988,
+                  "id": 9051,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8993,
+                  "scope": 9056,
                   "src": "7163:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4574,7 +4574,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8987,
+                    "id": 9050,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "7163:7:16",
@@ -4590,15 +4590,15 @@
               "src": "7162:12:16"
             },
             "returnParameters": {
-              "id": 8992,
+              "id": 9055,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8991,
+                  "id": 9054,
                   "name": "frequency",
                   "nodeType": "VariableDeclaration",
-                  "scope": 8993,
+                  "scope": 9056,
                   "src": "7198:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4607,7 +4607,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8990,
+                    "id": 9053,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "7198:7:16",
@@ -4622,7 +4622,7 @@
               ],
               "src": "7197:19:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "7141:76:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4631,22 +4631,22 @@
           {
             "body": null,
             "documentation": "If the loan has multiple installments returns the total of installments,\nif the loan has not installments it should return 1.\n@param id Id of the registry\n@return installments Total of installments",
-            "id": 9000,
+            "id": 9063,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getInstallments",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8996,
+              "id": 9059,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8995,
+                  "id": 9058,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9000,
+                  "scope": 9063,
                   "src": "7499:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4655,7 +4655,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 8994,
+                    "id": 9057,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "7499:7:16",
@@ -4671,15 +4671,15 @@
               "src": "7498:12:16"
             },
             "returnParameters": {
-              "id": 8999,
+              "id": 9062,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 8998,
+                  "id": 9061,
                   "name": "installments",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9000,
+                  "scope": 9063,
                   "src": "7534:20:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4688,7 +4688,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 8997,
+                    "id": 9060,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "7534:7:16",
@@ -4703,7 +4703,7 @@
               ],
               "src": "7533:22:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "7474:82:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4712,22 +4712,22 @@
           {
             "body": null,
             "documentation": "The registry could be paid before or after the date, but the debt will always be\nconsidered overdue if paid after this timestamp.\nThis is the estimated final payment date of the debt if it's always paid on each exact dueTime.\n@param id Id of the registry\n@return timestamp Timestamp of the final due time",
-            "id": 9007,
+            "id": 9070,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getFinalTime",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9003,
+              "id": 9066,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9002,
+                  "id": 9065,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9007,
+                  "scope": 9070,
                   "src": "7951:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4736,7 +4736,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9001,
+                    "id": 9064,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "7951:7:16",
@@ -4752,15 +4752,15 @@
               "src": "7950:12:16"
             },
             "returnParameters": {
-              "id": 9006,
+              "id": 9069,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9005,
+                  "id": 9068,
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9007,
+                  "scope": 9070,
                   "src": "7986:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4769,7 +4769,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9004,
+                    "id": 9067,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "7986:7:16",
@@ -4784,7 +4784,7 @@
               ],
               "src": "7985:19:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "7929:76:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4793,22 +4793,22 @@
           {
             "body": null,
             "documentation": "Similar to getFinalTime returns the expected payment remaining if paid always on the exact dueTime.\nIf the model has no interest discounts for early payments,\nthis method should return the same value as getClosingObligation.\n@param id Id of the registry\n@return amount Expected payment amount",
-            "id": 9014,
+            "id": 9077,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getEstimateObligation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9010,
+              "id": 9073,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9009,
+                  "id": 9072,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9014,
+                  "scope": 9077,
                   "src": "8397:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4817,7 +4817,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9008,
+                    "id": 9071,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "8397:7:16",
@@ -4833,15 +4833,15 @@
               "src": "8396:12:16"
             },
             "returnParameters": {
-              "id": 9013,
+              "id": 9076,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9012,
+                  "id": 9075,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9014,
+                  "scope": 9077,
                   "src": "8432:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4850,7 +4850,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9011,
+                    "id": 9074,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "8432:7:16",
@@ -4865,7 +4865,7 @@
               ],
               "src": "8431:16:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "8366:82:16",
             "stateMutability": "view",
             "superFunction": null,
@@ -4874,22 +4874,22 @@
           {
             "body": null,
             "documentation": "Creates a new registry using the provided data and id, it should fail if the id already exists\nor if calling validate(data) returns false or throws.\n@dev This method should only be callable by an operator\n@param id Id of the registry to create\n@param data Data to construct the new registry\n@return success True if the registry was created",
-            "id": 9023,
+            "id": 9086,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "create",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9019,
+              "id": 9082,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9016,
+                  "id": 9079,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9023,
+                  "scope": 9086,
                   "src": "8926:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4898,7 +4898,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9015,
+                    "id": 9078,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "8926:7:16",
@@ -4912,10 +4912,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9018,
+                  "id": 9081,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9023,
+                  "scope": 9086,
                   "src": "8938:19:16",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -4924,7 +4924,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 9017,
+                    "id": 9080,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "8938:5:16",
@@ -4940,15 +4940,15 @@
               "src": "8925:33:16"
             },
             "returnParameters": {
-              "id": 9022,
+              "id": 9085,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9021,
+                  "id": 9084,
                   "name": "success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9023,
+                  "scope": 9086,
                   "src": "8977:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4957,7 +4957,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9020,
+                    "id": 9083,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "8977:4:16",
@@ -4972,7 +4972,7 @@
               ],
               "src": "8976:14:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "8910:81:16",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4981,22 +4981,22 @@
           {
             "body": null,
             "documentation": "If the registry is fully paid on the call and the amount parameter exceeds the required\npayment amount, the method returns the real amount used on the payment.\nThe payment taken should always be the same as the requested unless the registry\nis fully paid on the process.\n@dev This method should only be callable by an operator\n@param id If of the registry\n@param amount Amount to pay\n@return real Real amount paid",
-            "id": 9032,
+            "id": 9095,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addPaid",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9028,
+              "id": 9091,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9025,
+                  "id": 9088,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9032,
+                  "scope": 9095,
                   "src": "9519:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5005,7 +5005,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9024,
+                    "id": 9087,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "9519:7:16",
@@ -5019,10 +5019,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9027,
+                  "id": 9090,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9032,
+                  "scope": 9095,
                   "src": "9531:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5031,7 +5031,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9026,
+                    "id": 9089,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "9531:7:16",
@@ -5047,15 +5047,15 @@
               "src": "9518:28:16"
             },
             "returnParameters": {
-              "id": 9031,
+              "id": 9094,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9030,
+                  "id": 9093,
                   "name": "real",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9032,
+                  "scope": 9095,
                   "src": "9565:12:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5064,7 +5064,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9029,
+                    "id": 9092,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "9565:7:16",
@@ -5079,7 +5079,7 @@
               ],
               "src": "9564:14:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "9502:77:16",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5088,22 +5088,22 @@
           {
             "body": null,
             "documentation": "Adds a new amount to be paid on the debt model,\neach model can handle the addition of more debt freely.\n@dev This method should only be callable by an operator\n@param id Id of the registry\n@param amount Debt amount to add to the registry\n@return added True if the debt was added",
-            "id": 9041,
+            "id": 9104,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addDebt",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9037,
+              "id": 9100,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9034,
+                  "id": 9097,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9041,
+                  "scope": 9104,
                   "src": "9951:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5112,7 +5112,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9033,
+                    "id": 9096,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "9951:7:16",
@@ -5126,10 +5126,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9036,
+                  "id": 9099,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9041,
+                  "scope": 9104,
                   "src": "9963:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5138,7 +5138,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9035,
+                    "id": 9098,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "9963:7:16",
@@ -5154,15 +5154,15 @@
               "src": "9950:28:16"
             },
             "returnParameters": {
-              "id": 9040,
+              "id": 9103,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9039,
+                  "id": 9102,
                   "name": "added",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9041,
+                  "scope": 9104,
                   "src": "9997:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5171,7 +5171,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9038,
+                    "id": 9101,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "9997:4:16",
@@ -5186,7 +5186,7 @@
               ],
               "src": "9996:12:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "9934:75:16",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5195,22 +5195,22 @@
           {
             "body": null,
             "documentation": "Runs the internal clock of a registry, this is used to compute the last changes on the state.\nIt can make transactions cheaper by avoiding multiple calculations when calling views.\nNot all models have internal clocks, a model without an internal clock should always return false.\nCalls to this method should be possible from any address,\nmultiple calls to run shouldn't affect the internal calculations of the model.\n@dev If the call had no effect the method would return False,\nthat is no sign of things going wrong, and the call shouldn't be wrapped on a require\n@param id If of the registry\n@return effect True if the run performed a change on the state",
-            "id": 9048,
+            "id": 9111,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "run",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9044,
+              "id": 9107,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9043,
+                  "id": 9106,
                   "name": "id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9048,
+                  "scope": 9111,
                   "src": "10825:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5219,7 +5219,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 9042,
+                    "id": 9105,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "10825:7:16",
@@ -5235,15 +5235,15 @@
               "src": "10824:12:16"
             },
             "returnParameters": {
-              "id": 9047,
+              "id": 9110,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9046,
+                  "id": 9109,
                   "name": "effect",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9048,
+                  "scope": 9111,
                   "src": "10855:11:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5252,7 +5252,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9045,
+                    "id": 9108,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "10855:4:16",
@@ -5267,14 +5267,14 @@
               ],
               "src": "10854:13:16"
             },
-            "scope": 9049,
+            "scope": 9112,
             "src": "10812:56:16",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 9050,
+        "scope": 9113,
         "src": "674:10196:16"
       }
     ],
@@ -5286,7 +5286,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-05-15T18:47:52.219Z",
+  "updatedAt": "2019-05-15T18:54:11.065Z",
   "devdoc": {
     "author": "Agustin Aguilar",
     "methods": {
