@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# to run: sh artifacts.sh master v1.0.1-beta "Auto release 1.0.1"
+# to run: sh artifacts.sh master v1.0.9-beta "Auto release 1.0.9"
 
 # define absolute path to rcn-diaspore-core and rcn-diaspore-contract-artifacts projects
 PATH_CORE="/Users/jpgonzalezra/Documents/Code/ripio/rcn-network"

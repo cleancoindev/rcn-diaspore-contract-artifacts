@@ -1,1 +1,1342 @@
-{"abi": [{"constant": true, "inputs": [], "name": "VERSION", "outputs": [{"name": "", "type": "uint256"}], "payable": false, "stateMutability": "view", "type": "function"}, {"constant": true, "inputs": [], "name": "url", "outputs": [{"name": "", "type": "string"}], "payable": false, "stateMutability": "view", "type": "function"}, {"constant": true, "inputs": [{"name": "engine", "type": "address"}, {"name": "index", "type": "uint256"}, {"name": "data", "type": "bytes"}, {"name": "oracleData", "type": "bytes"}], "name": "cost", "outputs": [{"name": "", "type": "uint256"}], "payable": false, "stateMutability": "view", "type": "function"}, {"constant": false, "inputs": [{"name": "engine", "type": "address"}, {"name": "index", "type": "uint256"}, {"name": "data", "type": "bytes"}, {"name": "oracleData", "type": "bytes"}], "name": "requestCosign", "outputs": [{"name": "", "type": "bool"}], "payable": false, "stateMutability": "nonpayable", "type": "function"}, {"constant": false, "inputs": [{"name": "engine", "type": "address"}, {"name": "index", "type": "uint256"}, {"name": "oracleData", "type": "bytes"}], "name": "claim", "outputs": [{"name": "", "type": "bool"}], "payable": false, "stateMutability": "nonpayable", "type": "function"}], "networks": {}}
+{
+  "contractName": "Cosigner",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "url",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "engine",
+          "type": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "name": "oracleData",
+          "type": "bytes"
+        }
+      ],
+      "name": "cost",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "engine",
+          "type": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "name": "oracleData",
+          "type": "bytes"
+        }
+      ],
+      "name": "requestCosign",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "engine",
+          "type": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "name": "oracleData",
+          "type": "bytes"
+        }
+      ],
+      "name": "claim",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.7;\n\n\n/**\n    @dev Defines the interface of a standard RCN cosigner.\n\n    The cosigner is an agent that gives an insurance to the lender in the event of a defaulted loan, the confitions\n    of the insurance and the cost of the given are defined by the cosigner.\n\n    The lender will decide what cosigner to use, if any; the address of the cosigner and the valid data provided by the\n    agent should be passed as params when the lender calls the \"lend\" method on the engine.\n\n    When the default conditions defined by the cosigner aligns with the status of the loan, the lender of the engine\n    should be able to call the \"claim\" method to receive the benefit; the cosigner can define aditional requirements to\n    call this method, like the transfer of the ownership of the loan.\n*/\ncontract Cosigner {\n    uint256 public constant VERSION = 2;\n\n    /**\n        @return the url of the endpoint that exposes the insurance offers.\n    */\n    function url() public view returns (string memory);\n\n    /**\n        @dev Retrieves the cost of a given insurance, this amount should be exact.\n\n        @return the cost of the cosign, in RCN wei\n    */\n    function cost(\n        address engine,\n        uint256 index,\n        bytes memory data,\n        bytes memory oracleData\n    )\n        public view returns (uint256);\n\n    /**\n        @dev The engine calls this method for confirmation of the conditions, if the cosigner accepts the liability of\n        the insurance it must call the method \"cosign\" of the engine. If the cosigner does not call that method, or\n        does not return true to this method, the operation fails.\n\n        @return true if the cosigner accepts the liability\n    */\n    function requestCosign(\n        address engine,\n        uint256 index,\n        bytes memory data,\n        bytes memory oracleData\n    )\n        public returns (bool);\n\n    /**\n        @dev Claims the benefit of the insurance if the loan is defaulted, this method should be only calleable by the\n        current lender of the loan.\n\n        @return true if the claim was done correctly.\n    */\n    function claim(address engine, uint256 index, bytes memory oracleData) public returns (bool);\n}\n",
+  "sourcePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/Cosigner.sol",
+  "ast": {
+    "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/Cosigner.sol",
+    "exportedSymbols": {
+      "Cosigner": [
+        12482
+      ]
+    },
+    "id": 12483,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12436,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@dev Defines the interface of a standard RCN cosigner.\nThe cosigner is an agent that gives an insurance to the lender in the event of a defaulted loan, the confitions\nof the insurance and the cost of the given are defined by the cosigner.\nThe lender will decide what cosigner to use, if any; the address of the cosigner and the valid data provided by the\nagent should be passed as params when the lender calls the \"lend\" method on the engine.\nWhen the default conditions defined by the cosigner aligns with the status of the loan, the lender of the engine\nshould be able to call the \"claim\" method to receive the benefit; the cosigner can define aditional requirements to\ncall this method, like the transfer of the ownership of the loan.",
+        "fullyImplemented": false,
+        "id": 12482,
+        "linearizedBaseContracts": [
+          12482
+        ],
+        "name": "Cosigner",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 12439,
+            "name": "VERSION",
+            "nodeType": "VariableDeclaration",
+            "scope": 12482,
+            "src": "830:35:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 12437,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "830:7:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 12438,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "864:1:22",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@return the url of the endpoint that exposes the insurance offers.",
+            "id": 12444,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "url",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12440,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "974:2:22"
+            },
+            "returnParameters": {
+              "id": 12443,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12442,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12444,
+                  "src": "998:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12441,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "998:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "997:15:22"
+            },
+            "scope": 12482,
+            "src": "962:51:22",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Retrieves the cost of a given insurance, this amount should be exact.\n@return the cost of the cosign, in RCN wei",
+            "id": 12457,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cost",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12453,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12446,
+                  "name": "engine",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1192:14:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12445,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1192:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12448,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1216:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12447,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1216:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12450,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1239:17:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12449,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12452,
+                  "name": "oracleData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1266:23:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12451,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1266:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1182:113:22"
+            },
+            "returnParameters": {
+              "id": 12456,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12455,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1325:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12454,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1325:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1324:9:22"
+            },
+            "scope": 12482,
+            "src": "1169:165:22",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@dev The engine calls this method for confirmation of the conditions, if the cosigner accepts the liability of\nthe insurance it must call the method \"cosign\" of the engine. If the cosigner does not call that method, or\ndoes not return true to this method, the operation fails.\n@return true if the cosigner accepts the liability",
+            "id": 12470,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestCosign",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12459,
+                  "name": "engine",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1748:14:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1748:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12461,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1772:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12460,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1772:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12463,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1795:17:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12462,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1795:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12465,
+                  "name": "oracleData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1822:23:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12464,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1822:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1738:113:22"
+            },
+            "returnParameters": {
+              "id": 12469,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12468,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1876:4:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 12467,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1876:4:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1875:6:22"
+            },
+            "scope": 12482,
+            "src": "1716:166:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Claims the benefit of the insurance if the loan is defaulted, this method should be only calleable by the\ncurrent lender of the loan.\n@return true if the claim was done correctly.",
+            "id": 12481,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claim",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12477,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12472,
+                  "name": "engine",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12481,
+                  "src": "2128:14:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12471,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2128:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12474,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12481,
+                  "src": "2144:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12473,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2144:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12476,
+                  "name": "oracleData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12481,
+                  "src": "2159:23:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12475,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2159:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2127:56:22"
+            },
+            "returnParameters": {
+              "id": 12480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12479,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12481,
+                  "src": "2200:4:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 12478,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2200:4:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2199:6:22"
+            },
+            "scope": 12482,
+            "src": "2113:93:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 12483,
+        "src": "806:1402:22"
+      }
+    ],
+    "src": "0:2209:22"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jpgonzalezra/Documents/Code/ripio/rcn-network/contracts/interfaces/Cosigner.sol",
+    "exportedSymbols": {
+      "Cosigner": [
+        12482
+      ]
+    },
+    "id": 12483,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12436,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@dev Defines the interface of a standard RCN cosigner.\nThe cosigner is an agent that gives an insurance to the lender in the event of a defaulted loan, the confitions\nof the insurance and the cost of the given are defined by the cosigner.\nThe lender will decide what cosigner to use, if any; the address of the cosigner and the valid data provided by the\nagent should be passed as params when the lender calls the \"lend\" method on the engine.\nWhen the default conditions defined by the cosigner aligns with the status of the loan, the lender of the engine\nshould be able to call the \"claim\" method to receive the benefit; the cosigner can define aditional requirements to\ncall this method, like the transfer of the ownership of the loan.",
+        "fullyImplemented": false,
+        "id": 12482,
+        "linearizedBaseContracts": [
+          12482
+        ],
+        "name": "Cosigner",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 12439,
+            "name": "VERSION",
+            "nodeType": "VariableDeclaration",
+            "scope": 12482,
+            "src": "830:35:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 12437,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "830:7:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 12438,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "864:1:22",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@return the url of the endpoint that exposes the insurance offers.",
+            "id": 12444,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "url",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12440,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "974:2:22"
+            },
+            "returnParameters": {
+              "id": 12443,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12442,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12444,
+                  "src": "998:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12441,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "998:6:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "997:15:22"
+            },
+            "scope": 12482,
+            "src": "962:51:22",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Retrieves the cost of a given insurance, this amount should be exact.\n@return the cost of the cosign, in RCN wei",
+            "id": 12457,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cost",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12453,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12446,
+                  "name": "engine",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1192:14:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12445,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1192:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12448,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1216:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12447,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1216:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12450,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1239:17:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12449,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12452,
+                  "name": "oracleData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1266:23:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12451,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1266:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1182:113:22"
+            },
+            "returnParameters": {
+              "id": 12456,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12455,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12457,
+                  "src": "1325:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12454,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1325:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1324:9:22"
+            },
+            "scope": 12482,
+            "src": "1169:165:22",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@dev The engine calls this method for confirmation of the conditions, if the cosigner accepts the liability of\nthe insurance it must call the method \"cosign\" of the engine. If the cosigner does not call that method, or\ndoes not return true to this method, the operation fails.\n@return true if the cosigner accepts the liability",
+            "id": 12470,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestCosign",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12459,
+                  "name": "engine",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1748:14:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1748:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12461,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1772:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12460,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1772:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12463,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1795:17:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12462,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1795:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12465,
+                  "name": "oracleData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1822:23:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12464,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1822:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1738:113:22"
+            },
+            "returnParameters": {
+              "id": 12469,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12468,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12470,
+                  "src": "1876:4:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 12467,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1876:4:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1875:6:22"
+            },
+            "scope": 12482,
+            "src": "1716:166:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Claims the benefit of the insurance if the loan is defaulted, this method should be only calleable by the\ncurrent lender of the loan.\n@return true if the claim was done correctly.",
+            "id": 12481,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claim",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12477,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12472,
+                  "name": "engine",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12481,
+                  "src": "2128:14:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12471,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2128:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12474,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12481,
+                  "src": "2144:13:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12473,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2144:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12476,
+                  "name": "oracleData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12481,
+                  "src": "2159:23:22",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 12475,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2159:5:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2127:56:22"
+            },
+            "returnParameters": {
+              "id": 12480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12479,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12481,
+                  "src": "2200:4:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 12478,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2200:4:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2199:6:22"
+            },
+            "scope": 12482,
+            "src": "2113:93:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 12483,
+        "src": "806:1402:22"
+      }
+    ],
+    "src": "0:2209:22"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-05-15T18:47:52.255Z",
+  "devdoc": {
+    "details": "Defines the interface of a standard RCN cosigner. The cosigner is an agent that gives an insurance to the lender in the event of a defaulted loan, the confitions of the insurance and the cost of the given are defined by the cosigner. The lender will decide what cosigner to use, if any; the address of the cosigner and the valid data provided by the agent should be passed as params when the lender calls the \"lend\" method on the engine. When the default conditions defined by the cosigner aligns with the status of the loan, the lender of the engine should be able to call the \"claim\" method to receive the benefit; the cosigner can define aditional requirements to call this method, like the transfer of the ownership of the loan.",
+    "methods": {
+      "claim(address,uint256,bytes)": {
+        "details": "Claims the benefit of the insurance if the loan is defaulted, this method should be only calleable by the current lender of the loan.",
+        "return": "true if the claim was done correctly."
+      },
+      "cost(address,uint256,bytes,bytes)": {
+        "details": "Retrieves the cost of a given insurance, this amount should be exact.",
+        "return": "the cost of the cosign, in RCN wei"
+      },
+      "requestCosign(address,uint256,bytes,bytes)": {
+        "details": "The engine calls this method for confirmation of the conditions, if the cosigner accepts the liability of the insurance it must call the method \"cosign\" of the engine. If the cosigner does not call that method, or does not return true to this method, the operation fails.",
+        "return": "true if the cosigner accepts the liability"
+      },
+      "url()": {
+        "return": "the url of the endpoint that exposes the insurance offers."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
